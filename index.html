@@ -2,23 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-
-        <ul class="site-navigation-left">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-        </ul>
-        <a class="main-header-logo" href="#">
+        <a class="main-header-logo">
           <img src="http://placehold.it/150x100" alt="Логотип Седона">
         </a>
-        <ul class="site-navigation-right">
+        <ul class="site-navigation">
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиници</a></li>
+          <li><a href="inner.html">Гостиници</a></li>
         </ul>
       </nav>
     </header>
@@ -30,20 +27,18 @@
         <!-- Фон -->
       </section>
       <section class="main-info">
-        <h1 class="disabled"> SEDONA </h1>
+        <h1 class="disabled" visually-hidden> SEDONA </h1>
         <h2>Седона — небольшой городок в Аризоне,  заслуживающий большего! </h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
 
-      <section class="main-1">
-        <h3 class="This-town">Настоящий городок</h3>
-        <ul>
-          <li>— №1 —</li>
-          <li>
-            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          </li>
-        </ul>
+      <section class="main-city">
+        <h3 class="this-town">Настоящий городок</h3>
+        <div>
+          <span>— №1 —</span>
+          <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
         <img src="http://placehold.it/150x100" alt="Photo-main-1">
       </section>
 
@@ -62,74 +57,66 @@
         </div>
       </section>
 
-      <section class="main-2">
+      <section class="main-bridge">
         <img src="http://placehold.it/150x100" alt="Photo-main-2">
         <h3>Там есть Мост дьявола</h3>
-        <ul>
-          <li>— №2 —</li>
-          <li>Да, по нему можно пройти! Если конечно вы осмелитесь
-          </li>
-        </ul>
+        <div>
+          <span>— №2 —</span>
+          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
       </section>
 
-      <section class="main-3">
-        <h3>Небольшая площадь</h3>
-        <ul>
-          <li>— №3 —</li>
-          <li>Все достопримечательности находятся очень близко</li>
-        </ul>
+      <section class="main-list">
+        <div class="main-list-area">
+          <h3>Небольшая площадь</h3>
+          <span>— №3 —</span>
+          <p>Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="main-list-road">
+          <h3>Красивая дорога</h3>
+          <span>— №4 —</span>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <div class="main-list-tourist">
+        </div>
+          <h3>Мало туристов</h3>
+          <span>— №5 —</span>
+          <p>Большинство едет в Гранд каньон и толпится там</p>
+        </div>
       </section>
-
-      <section class="main-4">
-        <h3>Красивая дорога</h3>
-        <ul>
-          <li>— №4 —</li>
-          <li>Ехать в Седону из Лас-Вегаса совсем не скучно!</li>
-        </ul>
-      </section>
-
-      <section class="main-5">
-        <h3>Мало туристов</h3>
-        <ul>
-          <li>— №5 —</li>
-          <li>Большинство едет в Гранд каньон и толпится там</li>
-        </ul>
-      </section>
-      <section class="main-5">
-
-      </section>
-      <section class="main-info">
+      <section class="main-info-search">
           <h3>Заинтересовались?</h3>
           <p>Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <input type="button" name="search" value="Поиск гостиницы в Седоне">
+          <input type="submit" name="search" value="Поиск гостиницы в Седоне">
       </section>
     </main>
 
     <section class="search">
         <div class="search-form">
-          <form class="search-forms" action="index.html" method="post">
-            <p class="del">
+          <form class="search-forms" action="https://echo.htmlacademy.ru" method="post">
+<!-- del __ Я думал P или div -->
+            <p class="search-arrival">
               <label>Дата заезда:</label>
               <input type="date" name="Arrival-date">
             </p>
-            <p class="del">
+            <p class="search-departure">
               <label>Дата выезда:</label>
               <input type="date" name="date-departure">
             </p>
-            <p class="del">
+            <p class="search-adults">
               <label>Взрослые:</label>
               <input type="number" name="Adults">
               <label>Дети:</label>
               <input type="number" name="Children">
             </p>
+            <input type="submit" name="submit" value="Найти">
           </form>
         </div>
     </section>
 
     <footer class="main-footer">
       <div class="footer-visit">
-        <p>#visitSEDONA</p>
+        <p><a href="#">#visitSEDONA</a></p>
       </div>
       <div class="social">
         <ul>
@@ -139,10 +126,8 @@
         </ul>
       </div>
       <div class="footer-logo">
-        <ul>
-          <li>Website by</li>
-          <li>logo htmlacademy</li>
-        </ul>
+        <span>Website by</span>
+        <a href="#">logo htmlacademy</a>
       </div>
     </footer>
   </body>
