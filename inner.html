@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+
+        <ul class="site-navigation-left">
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+        </ul>
+        <a class="main-header-logo" href="#">
+          <img src="http://placehold.it/150x100" alt="Логотип Седона">
+        </a>
+        <ul class="site-navigation-right">
+          <li><a href="#">Карта штата</a></li>
+          <li>Гостиници</li>
+        </ul>
+      </nav>
+    </header>
+<!----------------------------->
+    <main>
+      <section class="main-filter">
+        <form class="main-search2" action="index.html" method="post">
+          <div class="main-Infrastructure">
+            <h3>Инфраструктура</h3>
+            <input type="checkbox" checked>
+            <label>Бассеин</label>
+            <input type="checkbox">
+            <label>Парковка</label>
+            <input type="checkbox">
+            <label>WI-FI</label>
+          </div>
+          <div class="main-type-accommodation">
+            <h3>Тип жилья:</h3>
+            <input type="checkbox" checked>
+            <label>Гостинница</label>
+            <input type="checkbox" checked>
+            <label>Мотель</label>
+            <input type="checkbox" checked>
+            <label>Апартаменты</label>
+          </div>
+          <div class="main-price">
+            <h3>Стоимость в сутки (Р):</h3>
+            <ul>
+              <li>от 0</li>
+              <li>До 3000</li>
+            </ul>
+            <input type="range" min="0" max="4000" step="100">
+            <input type="button" name="button" value="Показать">
+          </div>
+      </form>
+      </section>
+      <section class="main-sort">
+        <h2 class="disabled">Список гостиниц</h2>
+        <h3>Найдено: 3</h3>
+        <b>Сортировка:</b>
+        <ul>
+          <li>по цене</li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По рейтингу</a></li>
+        </ul>
+        <ul class="main-sorts">
+          <li> стрелки </li>
+          <li> звезды </li>
+        </ul>
+      </section>
+      <section class="List-hotels1">
+        <img src="http://placehold.it/150x100" alt="фото гостиницы">
+        <h3>Amara Resort & Spa</h3>
+        <ul>
+          <li>Гостиница</li>
+          <li> <input type="button" name="button" value="Подробнее"> </li>
+        </ul>
+        <ul>
+          <li>от 4000</li>
+          <li> <input type="button" name="button" value="Забронировать"> </li>
+        </ul>
+        <ul>
+          <li> звезды </li>
+          <li>Рейтинг: 8,5</li>
+        </ul>
+      </section>
+      <section class="List-hotels2">
+        <img src="http://placehold.it/150x100" alt="фото гостиницы">
+        <h3>Desert Quail Inn</h3>
+        <ul>
+          <li>Мотель</li>
+          <li> <input type="button" name="button" value="Подробнее"> </li>
+        </ul>
+        <ul>
+          <li>от 3000</li>
+          <li> <input type="button" name="button" value="Забронировать"> </li>
+        </ul>
+        <ul>
+          <li> звезды </li>
+          <li>Рейтинг: 8,9</li>
+        </ul>
+      </section>
+      <section class="List-hotels3">
+        <img src="http://placehold.it/150x100" alt="фото гостиницы">
+        <h3>Villas at Poco Diablo</h3>
+        <ul>
+          <li>Апартаменты</li>
+          <li> <input type="button" name="button" value="Подробнее"> </li>
+        </ul>
+        <ul>
+          <li>от 2000</li>
+          <li> <input type="button" name="button" value="Забронировать"> </li>
+        </ul>
+        <ul>
+          <li> звезды </li>
+          <li>Рейтинг: 9,2</li>
+        </ul>
+      </section>
+    </main>
+<!----------------------------->
+    <footer class="main-footer">
+      <div class="">
+        <p>#visitSEDONA</p>
+      </div>
+      <div class="social">
+        <ul>
+          <li><a class="social-button" href="#">Твитер</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Ютуб</a></li>
+        </ul>
+      </div>
+      <div class="">
+        <ul>
+          <li>Website by</li>
+          <li>logo htmlacademy</li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+  </html>

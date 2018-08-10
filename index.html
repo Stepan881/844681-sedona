@@ -22,8 +22,8 @@
         </ul>
       </nav>
     </header>
-<!----------------------------->
-    <main>
+
+    <main class="main">
       <section class="main-intro">
         <img src="http://placehold.it/150x100" alt="main-wolcome">
         <img src="http://placehold.it/150x100" alt="main-polygon">
@@ -96,30 +96,28 @@
         </ul>
       </section>
       <section class="main-5">
-        <!-- MAP -->
+
+      </section>
+      <section class="main-info">
+          <h3>Заинтересовались?</h3>
+          <p>Укажите предполагаемые даты поездки,<br>
+            и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <input type="button" name="search" value="Поиск гостиницы в Седоне">
       </section>
     </main>
 
     <section class="search">
-        <div class="main-search">
-          <h3>Заинтересовались?</h3>
-          <p>Укажите предполагаемые даты поездки,<br>
-            и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        </div>
-        <div class="search-info">
-          <h3>Поиск гостиницы в Седоне</h3>
-        </div>
         <div class="search-form">
           <form class="search-forms" action="index.html" method="post">
-            <p>
+            <p class="del">
               <label>Дата заезда:</label>
               <input type="date" name="Arrival-date">
             </p>
-            <p>
+            <p class="del">
               <label>Дата выезда:</label>
               <input type="date" name="date-departure">
             </p>
-            <p>
+            <p class="del">
               <label>Взрослые:</label>
               <input type="number" name="Adults">
               <label>Дети:</label>
@@ -128,9 +126,9 @@
           </form>
         </div>
     </section>
-<!----------------------------->
+
     <footer class="main-footer">
-      <div class="">
+      <div class="footer-visit">
         <p>#visitSEDONA</p>
       </div>
       <div class="social">
@@ -140,13 +138,12 @@
           <li><a class="social-button" href="#">Ютуб</a></li>
         </ul>
       </div>
-      <div class="">
+      <div class="footer-logo">
         <ul>
           <li>Website by</li>
           <li>logo htmlacademy</li>
         </ul>
       </div>
     </footer>
-
   </body>
 </html>
