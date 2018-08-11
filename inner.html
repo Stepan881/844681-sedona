@@ -8,21 +8,21 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
+        <a href="index.html" class="main-header-logo">
           <img src="http://placehold.it/150x100" alt="Логотип Седона">
         </a>
         <ul class="site-navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
-          <li><a>Карта штата</a></li>
-          <li><a href="index.html">Гостиници</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a>Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="main-filter">
-        <form class="main-search2" action="https://echo.htmlacademy.ru" method="post">
+        <form class="main-search-menu" action="https://echo.htmlacademy.ru" method="post">
           <div class="main-Infrastructure">
             <h3>Инфраструктура</h3>
             <input type="checkbox" checked>
@@ -53,73 +53,81 @@
       </form>
       </section>
       <section class="main-sort">
-        <h2 class="disabled" visually-hidden>Список гостиниц</h2>
+        <h1 class="visually-hidden">Список гостиниц</h1>
         <h3>Найдено: 3</h3>
         <b>Сортировка:</b>
         <ul>
-          <li>по цене</li>
-          <li><a>По типу</a></li>
-          <li><a>По рейтингу</a></li>
+          <li><a>по цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По рейтингу</a></li>
         </ul>
         <ul class="main-sorts">
-          <li> <a href="#">стрелки</a> </li>
-          <li> звезды </li>
+          <li><a href="#">стрелки</a></li>
+          <li><a href="#">звезды</a></li>
         </ul>
       </section>
-      <section class="list-hotel">
-        <img src="http://placehold.it/150x100" alt="фото гостиницы">
-        <h1><a href="#">Amara Resort & Spa</a></h1>
-        <div>
-          <span>Гостиница</span>
-          <a href="#">Подробнее</a>
-        </div>
-        <div>
-          <span>от 4000</span>
-          <a href="#">Забронировать</a>
-        </div>
-        <div>
-          <span> звезды </span>
-          <span>Рейтинг: 8,5</span>
-        </div>
-      </section>
-      <section class="list-motel">
-        <img src="http://placehold.it/150x100" alt="фото гостиницы">
-        <h1><a href="#">Desert Quail Inn</a></h1>
-        <div>
-          <span>Мотель</span>
-          <a href="#">Подробнее</a>
-        </div>
-        <div>
-          <span>от 3000</span>
-          <a href="#">Забронировать</a>
-        </div>
-        <div>
-          <span> звезды </span>
-          <span>Рейтинг: 8,9</span>
-        </div>
-      </section>
 
-      <section class="list-apartments">
-        <img src="http://placehold.it/150x100" alt="фото гостиницы">
-        <h1><a href="#">Villas at Poco Diablo</a></h1>
-        <div>
-          <span>Апартаменты</span>
-          <a href="#">Подробнее</a>
-        </div>
-        <div>
-          <span>от 2000</span>
-          <a href="#">Забронировать</a>
-        </div>
-        <div>
-          <span> звезды </span>
-          <span>Рейтинг: 9,2</span>
-        </div>
+      <section class="list-hotel">
+        <article class="list-hotels">
+          <img src="http://placehold.it/150x100" alt="фото гостиницы">
+          <div class="list-hotels-sheet">
+            <h2><a href="#">Amara Resort & Spa</a></h2>
+            <div class="list-sheet-more">
+              <span>Гостиница</span>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="list-sheet-reservation">
+              <span>от 4000</span>
+              <a href="#">Забронировать</a>
+            </div>
+            <div class="list-sheet-Rating">
+              <span>звезды</span>
+              <span>Рейтинг: 8,5</span>
+            </div>
+          </div>
+        </article>
+        <article class="list-motel">
+          <img src="http://placehold.it/150x100" alt="фото гостиницы">
+          <div class="list-motel-sheet">
+            <h2><a href="#">Desert Quail Inn</a></h2>
+            <div class="list-sheet-more">
+              <span>Мотель</span>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="list-sheet-reservation">
+              <span>от 3000</span>
+              <a href="#">Забронировать</a>
+            </div>
+            <div class="list-sheet-Rating">
+              <span> звезды </span>
+              <span>Рейтинг: 8,9</span>
+            </div>
+          </div>
+        </article>
+        <article class="list-apartments">
+          <img src="http://placehold.it/150x100" alt="фото гостиницы">
+          <div class="list-apartments-sheet">
+            <h2><a href="#">Villas at Poco Diablo</a></h2>
+            <div class="list-sheet-more">
+              <span>Апартаменты</span>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="list-sheet-reservation">
+              <span>от 2000</span>
+              <a href="#">Забронировать</a>
+            </div>
+            <div class="list-sheet-Rating">
+              <span> звезды </span>
+              <span>Рейтинг: 9,2</span>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
 
     <footer class="footers">
       <div class="footer-visit">
-        <p><a href="#">#visitSEDONA</a></p>
+        <a href="#">#visitSEDONA</a>
       </div>
       <div class="social">
         <ul>
@@ -130,7 +138,9 @@
       </div>
       <div class="footer-logo">
         <span>Website by</span>
-        <a href="#">logo htmlacademy</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="#" alt="logo htmlacademy">
+        </a>
       </div>
     </footer>
   </body>
