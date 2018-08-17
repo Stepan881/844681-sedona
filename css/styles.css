@@ -1,8 +1,19 @@
+/* временный фон */
 *{
-  margin-top: 0;
+  background: #e9e5dc;
 }
 
-.main-intro img{
-  background-color: #848693;
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
+.main-map img{
+  width: 50%;
 }

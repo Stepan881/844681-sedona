@@ -2,56 +2,78 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a href="index.html" class="main-header-logo">
-          <img src="img/logo.png" width="100" height="50" alt="Седона">
+        <a class="main-header-logo">
+          <img src="img/logo.png" alt="Седона" title="Седона">
         </a>
         <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a>Гостиницы</a></li>
+          <li><a href="#" aria-label="Информация">Информация</a></li>
+          <li><a href="#" aria-label="Фото и видео">Фото и видео</a></li>
+          <li><a href="#" aria-label="Карта штата">Карта штата</a></li>
+          <li><a aria-label="Гостиницы">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="main-filter">
-        <form class="main-search-menu" action="https://echo.htmlacademy.ru" method="post">
+        <form class="main-search-menu" action="https://echo.htmlacademy.ru" method="post" oninput="out.value=outs.value">
           <div class="main-Infrastructure">
             <h3>Инфраструктура</h3>
-            <input type="checkbox" checked>
-            <label>Бассеин</label>
-            <input type="checkbox">
-            <label>Парковка</label>
-            <input type="checkbox">
-            <label>WI-FI</label>
+            <label for="pool">
+              <input type="checkbox" class="visually-hidden" name="pool" id="pool" aria-label="Бассеин" checked>
+              <span class="checkbox-pool"><img src="img/svg/checkbox-on.svg" alt="Бассеин"></span>
+              Бассеин
+            </label>
+            <label for="parking">
+              <input type="checkbox" class="visually-hidden" name="parking" id="parking" aria-label="Парковка">
+              <span class="checkbox-parking"><img src="img/svg/checkbox-off.svg" alt="Парковка"></span>
+              Парковка
+            </label>
+            <label for="wifi">
+              <input type="checkbox" class="visually-hidden" name="wifi" id="wifi" aria-label="WI-FI">
+              <span class="checkbox-wifi"><img src="img/svg/checkbox-off.svg" alt="WI-FI"></span>
+              WI-FI
+            </label>
           </div>
           <div class="main-type-accommodation">
             <h3>Тип жилья:</h3>
-            <input type="checkbox" checked>
-            <label>Гостинница</label>
-            <input type="checkbox" checked>
-            <label>Мотель</label>
-            <input type="checkbox" checked>
-            <label>Апартаменты</label>
+            <label for="hotel">
+              <input type="checkbox" class="visually-hidden" name="hotel" id="hotel" aria-label="Гостинница" checked>
+              <span class="checkbox-hotel"><img src="img/svg/checkbox-on.svg" alt="Гостинница"></span>
+                Гостинница
+            </label>
+            <label for="motel">
+              <input type="checkbox" class="visually-hidden" name="motel" id="motel" aria-label="Мотель" checked>
+              <span class="checkbox-motel"><img src="img/svg/checkbox-on.svg" alt="Мотель"></span>
+              Мотель
+            </label>
+            <label for="apartments">
+              <input type="checkbox" class="visually-hidden" name="apartments" id="apartments" aria-label="Апартаменты" checked>
+              <span class="checkbox-apartments"><img src="img/svg/checkbox-on.svg" alt="Апартаменты"></span>
+              Апартаменты
+            </label>
           </div>
           <div class="main-price">
             <h3>Стоимость в сутки (Р):</h3>
             <ul>
               <li>от 0</li>
-              <li>До 3000</li>
+              <li>
+                <output name="out">3000</output>
+              </li>
             </ul>
-            <input type="range" min="0" max="4000" step="100">
-            <input type="submit" name="submit" value="Показать">
+            <input type="range" name="outs" min="0" max="4000" step="100" value="3000">
+            <button type="submit" name="button" title="Показать" value="Показать">Показать</button>
           </div>
-      </form>
+        </form>
       </section>
+
       <section class="main-sort">
         <h1 class="visually-hidden">Список гостиниц</h1>
         <h3>Найдено: 3</h3>
@@ -62,9 +84,12 @@
           <li><a href="#">По рейтингу</a></li>
         </ul>
         <ul class="main-sorts">
-          <li><a href="#">стрелки</a></li>
-          <li><a href="#">звезды</a></li>
-        </ul>
+          <li><a href="#" aria-label="Сортировка по возрастанию" title="Сортировка по возрастанию">
+            <img src="img/svg/icon-up-dir.svg" alt="Сортировка по возрастанию"></a>
+          </li>
+          <li><a href="#" aria-label="Сортировка по убыванию" title="Сортировка по убыванию">
+            <img src="img/svg/icon-down-dir.svg" alt="Сортировка по убыванию"></a>
+          </li>
       </section>
 
       <section class="list-hotel">
@@ -81,7 +106,12 @@
               <a href="#">Забронировать</a>
             </div>
             <div class="list-sheet-rating">
-              <span>звезды</span>
+              <span>
+                <img src="img/svg/star.svg" alt="звезда">
+                <img src="img/svg/star.svg" alt="звезда">
+                <img src="img/svg/star.svg" alt="звезда">
+                <img src="img/svg/star.svg" alt="звезда">
+              </span>
               <span>Рейтинг: 8,5</span>
             </div>
           </div>
@@ -99,7 +129,11 @@
               <a href="#">Забронировать</a>
             </div>
             <div class="list-sheet-rating">
-              <span> звезды </span>
+              <span>
+                <img src="img/svg/star.svg" alt="звезда">
+                <img src="img/svg/star.svg" alt="звезда">
+                <img src="img/svg/star.svg" alt="звезда">
+              </span>
               <span>Рейтинг: 8,9</span>
             </div>
           </div>
@@ -117,7 +151,10 @@
               <a href="#">Забронировать</a>
             </div>
             <div class="list-sheet-rating">
-              <span> звезды </span>
+              <span>
+                <img src="img/svg/star.svg" alt="звезда">
+                <img src="img/svg/star.svg" alt="звезда">
+              </span>
               <span>Рейтинг: 9,2</span>
             </div>
           </div>
@@ -131,14 +168,26 @@
       </div>
       <div class="social">
         <ul>
-          <li><a class="social-button" href="#">Твитер</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Ютуб</a></li>
+          <li>
+            <a href="#" class="social-button" aria-label="Твитер">
+              <img src="img/svg/twitter.svg" alt="Твитер" title="Наш Твитер">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-button" aria-label="Фейсбук">
+              <img src="img/svg/fb-icon.svg" alt="Фейсбук" title="Наш Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-button" aria-label="Ютуб" title="Наш Ютуб">
+              <img src="img/svg/youtube.svg" alt="Ютуб">
+            </a>
+          </li>
         </ul>
       </div>
       <div class="footer-logo">
         <span>Website by</span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy" aria-label="Html академия" title="Наша Html академия">
           <img src="img/svg/logo-htmlacademy.svg" width="115" height="41" alt="logo htmlacademy">
         </a>
       </div>

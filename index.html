@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
@@ -9,24 +10,24 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo">
-          <img src="img/logo.png" width="100" height="50" alt="Седона">
+          <img src="img/logo.png" alt="Седона" title="Седона">
         </a>
         <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="inner.html">Гостиницы</a></li>
+          <li><a href="#" aria-label="Информация">Информация</a></li>
+          <li><a href="#" aria-label="Фото и видео">Фото и видео</a></li>
+          <li><a href="#" aria-label="Карта штата">Карта штата</a></li>
+          <li><a href="inner.html" aria-label="Гостиницы">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="main">
       <section class="main-intro">
-        <img src="img/welcome.png" width="459" height="353" alt="main-wolcome">
+        <img src="img/welcome.png" width="459" height="353" alt="Добро пожаловать в Седону">
         <!-- Фон полигон-->
       </section>
       <section class="main-info">
-        <h1 class="visually-hidden"> SEDONA </h1>
+        <h1 class="visually-hidden">SEDONA</h1>
         <h2>Седона — небольшой городок в Аризоне,  заслуживающий большего! </h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
@@ -42,16 +43,19 @@
 
       <section class="main-services">
         <div class="main-services-home">
+          <img src="img/svg/icon-1.svg" alt="Жилье">
           <h3>Жильё</h3>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </div>
         <div class="main-services-food">
+          <img src="img/svg/icon-3.svg" alt="Еда">
           <h3>Еда</h3>
-            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="main-services-souvenirs">
+          <img src="img/svg/icon-2.svg" alt="Сувениры">
           <h3>Сувениры</h3>
-            <p>Не только китайского, но и местного производства!</p>
+          <p>Не только китайского, но и местного производства!</p>
         </div>
       </section>
       <section class="main-bridge">
@@ -85,26 +89,34 @@
             и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <input type="submit" name="search" value="Поиск гостиницы в Седоне">
       </section>
+      <section class="main-map">
+        <img src="img/map.jpg" alt="На карте">
+      </section>
     </main>
 
     <section class="search">
         <div class="search-form">
           <form class="search-forms" action="https://echo.htmlacademy.ru" method="post">
+            <h2 class="visually-hidden">Поиск жилья</h2>
             <p class="search-arrival">
-              <label>Дата заезда:</label>
-              <input type="date" name="Arrival-date">
+              <label for="arrival-date">Дата заезда:</label>
+              <input type="text" id="arrival-date" name="arrival-date"
+              placeholder="24 апреля 2017" value="24 апреля 2017">
+              <img src="img/svg/calendar.svg" alt="Дата заезда" title="Дата заезда">
             </p>
-            <p class="search-departure">
-              <label>Дата выезда:</label>
-              <input type="date" name="date-departure">
+            <p class="date-departure">
+              <label for="date-departure">Дата выезда:</label>
+              <input type="text" id="date-departure" name="date-departure"
+              placeholder="4 июля 2017" value="4 июля 2017">
+              <img src="img/svg/calendar.svg" alt="Дата выезда" title="Дата выезда">
             </p>
             <p class="search-adults">
-              <label>Взрослые:</label>
-              <input type="number" name="Adults">
-              <label>Дети:</label>
-              <input type="number" name="Children">
+              <label for="adults">Взрослые:</label>
+              <input type="number" id="adults" name="adults" placeholder="2" value="2">
+              <label for="сhildren">Дети:</label>
+              <input type="number" id="children" name="children" placeholder="0" value="0">
             </p>
-            <input type="submit" name="submit" value="Найти">
+            <button type="submit" name="button" title="Найти Гостинницу" value="Найти">Найти</button>
           </form>
         </div>
     </section>
@@ -115,14 +127,26 @@
       </div>
       <div class="social">
         <ul>
-          <li><a class="social-button" href="#">Твитер</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Ютуб</a></li>
+          <li>
+            <a href="#" class="social-button" aria-label="Твитер">
+              <img src="img/svg/twitter.svg" alt="Твитер" title="Наш Твитер">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-button" aria-label="Фейсбук">
+              <img src="img/svg/fb-icon.svg" alt="Фейсбук" title="Наш Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-button" aria-label="Ютуб" title="Наш Ютуб">
+              <img src="img/svg/youtube.svg" alt="Ютуб">
+            </a>
+          </li>
         </ul>
       </div>
       <div class="footer-logo">
         <span>Website by</span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy" aria-label="Html академия" title="Наша Html академия">
           <img src="img/svg/logo-htmlacademy.svg" width="115" height="41" alt="logo htmlacademy">
         </a>
       </div>
