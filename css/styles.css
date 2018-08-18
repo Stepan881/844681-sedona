@@ -3,6 +3,10 @@
   background: #e9e5dc;
 }
 
+ul{
+    list-style:none;
+}
+
 .visually-hidden{
   position: absolute;
   width: 1px;
