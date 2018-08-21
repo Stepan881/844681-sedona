@@ -10,14 +10,16 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-          <a class="main-header-logo" href="index.html" aria-label="На главную">
+        <a class="main-header-logo" href="index.html" aria-label="На главную">
           <img src="img/logo.png" alt="Седона" title="Седона">
         </a>
         <ul class="site-navigation">
           <li><a href="#" aria-label="Информация">Информация</a></li>
           <li><a href="#" aria-label="Фото и видео">Фото и видео</a></li>
           <li><a href="#" aria-label="Карта штата">Карта штата</a></li>
-          <li><a aria-label="Гостиницы">Гостиницы</a></li>
+          <li  class="navigation-active">
+            <a aria-label="Гостиницы">Гостиницы</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -25,7 +27,7 @@
     <main>
       <section class="main-filter">
         <form class="main-search-menu" action="https://echo.htmlacademy.ru" method="post" oninput="out.value=outs.value">
-          <div class="main-Infrastructure">
+          <div class="main-infrastructure">
             <h3>Инфраструктура</h3>
             <label for="pool">
               <input type="checkbox" class="visually-hidden" name="pool" id="pool" aria-label="Бассеин" checked>
@@ -80,7 +82,7 @@
         <h3>Найдено: 3</h3>
         <b>Сортировка:</b>
         <ul>
-          <li><a>по цене</a></li>
+          <li><a class="sort-active">по цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По рейтингу</a></li>
         </ul>
@@ -165,10 +167,10 @@
     </main>
 
     <footer class="footers">
-      <div class="footer-visit">
+      <div class="footer footer-visit">
         <a href="#">#visitSEDONA</a>
       </div>
-      <div class="social">
+      <div class="footer social">
         <ul>
           <li>
             <a href="#" class="social-button" aria-label="Твитер">
@@ -190,9 +192,9 @@
           </li>
         </ul>
       </div>
-      <div class="footer-logo">
-        <span>Website by</span>
+      <div class="footer footer-logo">
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy" aria-label="Html академия" title="Наша Html академия">
+          <span>Website by</span>
           <img src="img/svg/logo-htmlacademy.svg" width="115" height="41" alt="logo htmlacademy">
         </a>
       </div>

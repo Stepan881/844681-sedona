@@ -14,10 +14,8 @@ a{
 }
 .main-header{
   background-color: #ffffff;
-
 }
 .main-navigation{
-  text-align: center;
 }
 .site-navigation{
   margin: 0;
@@ -40,12 +38,12 @@ a{
 .site-navigation a:active{
   color: rgba(0, 0, 0, 0.3);
 }
-/* Когда по ссылке кликнул, после она в режиме visited.
-Это нормально?*/
-.site-navigation a:visited{
+.navigation-active a,
+.navigation-active a:active,
+.navigation-active a:hover{
   color: #766357;
 }
-
+/*main*/
 .main-intro{
   position: relative;
   width: 100%;
@@ -55,8 +53,6 @@ a{
   position: absolute;
   background: url("../img/background-photo.jpg");
   background-repeat: no-repeat;
-  background-size: 96% auto;
-  background-position: center -113px;
   width: 100%;
   height: 508px;
 }
@@ -66,13 +62,6 @@ a{
   top: 50%;
 }
 .visually-hidden{
-
-}
-.main{
-  text-align: center;
-}
-.main-info{
-  text-align: center;
 }
 .main-info h2{
   font-size: 21px;
@@ -102,12 +91,7 @@ a{
   background-color: #81b3d2;
   color: #ffffff;
 }
-.this-towns{
-  float: left;
-}
-.this-town img{
-  float: right;
-}
+
 .main-info-search h3{
   margin: 0;
   padding: 0;
@@ -126,12 +110,7 @@ a{
   display:inline-block;
   vertical-align: middle;}
 }
-.main-bridge img{
-  float: left;
-}
-.main-bridges{
-  float: right;
-}
+
 .main-lists{
   display:inline-block;
   vertical-align: middle;
@@ -211,12 +190,26 @@ a{
   line-height: 26px;
   font-weight: 700;
 }
+.social{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 .footer,
-.social li{
+.social ul{
+  list-style: none;
   margin: 0;
   padding: 0;
-  display:inline-block;
-  vertical-align: middle;
+}
+.social img{
+    background-color: #81b3d2;
+    padding: 8px;
+}
+.social img:hover{
+    background-color: #669ec0;
+}
+.social img:active{
+    background-color: #5496bd;
 }
 .footer-logo span{
   color: #000000;
@@ -225,5 +218,175 @@ a{
   font-weight: 400;
 }
 .footer-logo span:active{
+  }
+
+/**/
+/*inner*/
+.main-filter{
+  background: url("../img/filter-background.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-color: #5496bd;
+  color: #ffffff;
+}
+.main-filter h3{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+.main-filter label{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.main-filter ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.main-filter button{
+  width: 133px;
+  height: 32px;
+  font: inherit;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  background-color: transparent;
+}
+.main-filter button:hover{
+  background-color: #ffffff;
+  color: #000000;
+}
+.main-sert{
+  background-color: #fefefe;
+}
+.main-sort h3{
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+.main-sort ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+.main-sort b{
+  color: #000000;
+}
+.main-sort a{
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #81b3d2;
+}
+.main-sort a:hover{
+  color: #81b3d2;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+.main-sort a:active{
+  color: #000000;
+  text-decoration: none;
+}
+a.sort-active,
+a.sort-active:hover{
+  color: #81b3d2;
+  text-decoration: none;
+}
+
+.list-hotel h2{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.list-hotel h2 a{
+  color: #000000;
+}
+.list-hotel h2 a:hover{
+  color: #81b3d2;
+}
+.list-hotel h2 a:active{
+  color: rgba(0, 0, 0, 0.3);
+}
+.list-hotel span{
+  color: #333333;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.list-sheet-more a{
+  padding: 4px 12px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+}
+.list-sheet-more a:hover{
+  background-color: #669ec0;
 
 }
+.list-sheet-more a:active{
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.list-sheet-reservation a{
+  padding: 4px 8px;
+  background-color: #766357;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+}
+.list-sheet-reservation a:hover{
+  background-color: #604e43;
+
+}
+.list-sheet-reservation a:active{
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+.list-sheet-rating span{
+  color: #666666;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  background-color: #f2f2f2;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------*/
