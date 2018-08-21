@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>HTML Academy: Седона</title>
@@ -23,8 +24,9 @@
 
     <main class="main">
       <section class="main-intro">
-        <img src="img/welcome.png" width="459" height="353" alt="Добро пожаловать в Седону">
-        <!-- Фон полигон-->
+        <div class="main-in">
+          <img src="img/welcome.png" width="459" height="353" alt="Добро пожаловать в Седону">
+        </div>
       </section>
       <section class="main-info">
         <h1 class="visually-hidden">SEDONA</h1>
@@ -32,9 +34,10 @@
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
+
       <section class="main-city">
-        <h3 class="this-town">Настоящий городок</h3>
         <div class="this-towns">
+          <h3 class="this-town">Настоящий городок</h3>
           <span>— №1 —</span>
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
@@ -42,17 +45,17 @@
       </section>
 
       <section class="main-services">
-        <div class="main-services-home">
+        <div class="main-service">
           <img src="img/svg/icon-1.svg" alt="Жилье">
           <h3>Жильё</h3>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </div>
-        <div class="main-services-food">
+        <div class="main-service">
           <img src="img/svg/icon-3.svg" alt="Еда">
           <h3>Еда</h3>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
-        <div class="main-services-souvenirs">
+        <div class="main-service">
           <img src="img/svg/icon-2.svg" alt="Сувениры">
           <h3>Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
@@ -67,17 +70,17 @@
         </div>
       </section>
       <section class="main-list">
-        <div class="main-list-area">
+        <div class="main-lists">
           <h3>Небольшая площадь</h3>
           <span>— №3 —</span>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
-        <div class="main-list-road">
+        <div class="main-lists">
           <h3>Красивая дорога</h3>
           <span>— №4 —</span>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
-        <div class="main-list-tourist">
+        <div class="main-lists">
           <h3>Мало туристов</h3>
           <span>— №5 —</span>
           <p>Большинство едет в Гранд каньон и толпится там</p>
@@ -87,7 +90,7 @@
           <h3>Заинтересовались?</h3>
           <p>Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <input type="submit" name="search" value="Поиск гостиницы в Седоне">
+          <input class="main-btn" type="submit" name="search" value="Поиск гостиницы в Седоне">
       </section>
       <section class="main-map">
         <img src="img/map.jpg" alt="На карте">
@@ -122,10 +125,10 @@
     </section>
 
     <footer class="footers">
-      <div class="footer-visit">
+      <div class="footer footer-visit">
         <a href="#">#visitSEDONA</a>
       </div>
-      <div class="social">
+      <div class="footer social">
         <ul>
           <li>
             <a href="#" class="social-button" aria-label="Твитер">
@@ -147,9 +150,9 @@
           </li>
         </ul>
       </div>
-      <div class="footer-logo">
-        <span>Website by</span>
+      <div class="footer footer-logo">
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy" aria-label="Html академия" title="Наша Html академия">
+          <span>Website by</span>
           <img src="img/svg/logo-htmlacademy.svg" width="115" height="41" alt="logo htmlacademy">
         </a>
       </div>
