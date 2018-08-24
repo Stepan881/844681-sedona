@@ -15,14 +15,14 @@ a{
   text-decoration: none;
 }
 .visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
+  position: absolute;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  margin: -1px;
+  border: 0;
+  padding: 0;
 }
 .main-header{
   background-color: #ffffff;
@@ -35,7 +35,6 @@ a{
   list-style: none;
 }
 .site-navigation li{
-  margin: 0 20px;
   display: inline;
 }
 .site-navigation a{
@@ -62,7 +61,6 @@ a{
 .main-intro{
   position: relative;
   width: 100%;
-  height: 508px;
 }
 .main-in{
   position: relative;
@@ -71,7 +69,8 @@ a{
               url("../img/background-photo.jpg") 0 -88px;
   background-repeat: no-repeat;
   width: 100%;
-  height: 508px;
+  padding-top: 508px;
+  margin-bottom: 60px;
 }
 .main-intro img{
   margin-top: 76px;
@@ -155,7 +154,7 @@ a{
 /* форма поиска*/
 .search{
   width: 568px;
-  height: 395px;
+
   background-color: #ffffff;
   text-align: center;
 }
@@ -164,18 +163,14 @@ a{
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-
 }
 .search-forms input{
   font: inherit;
   background-color: #f2f2f2;
   width: 346px;
-  height: 38px;
-
 }
 .search-forms button{
   width: 458px;
-  height: 58px;
   font: inherit;
   background-color: #81b3d2;
   color: #ffffff;
@@ -241,7 +236,6 @@ a{
 /*inner*/
 .main-filter{
   background: url("../img/filter-background.jpg") 0 -376px no-repeat;
-
   width: 100%;
   background-color: #5496bd;
   color: #ffffff;
@@ -337,8 +331,9 @@ a.sort-active:hover{
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0;
 }
-.list-hotel h2 a{
+.list-hotels-btn{
   color: #000000;
 }
 .list-hotel h2 a:hover{
@@ -395,7 +390,6 @@ a.sort-active:hover{
 
 /*Сетка*/
 .main-header{
-  min-height: 56px;
   min-width: 1200px;
 }
 .main-navigation{
@@ -413,16 +407,16 @@ a.sort-active:hover{
 }
 .site-navigation{
   display: flex;
-  justify-content: space-between;
-  margin: 14px auto;
+  margin: 14px 0;
   width: 1200px;
   text-align: center;
+
 }
 .site-navigation li{
-  width: 239px;
+  width: 240px;
 }
-.main-intro{
-  min-height: 510px;
+.site-navigation li:nth-child(3){
+   margin-left: auto;
 }
 .main-in{
   display: flex;
@@ -430,7 +424,6 @@ a.sort-active:hover{
   flex-direction: column;
 }
 .main-info{
-  min-height: 216px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -439,11 +432,13 @@ a.sort-active:hover{
 .main-info p{
   width: 636px;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 34px;
 }
-.main-info h2{
-  margin-top: 52px;
-  margin-bottom: 36px;
+.main-info p{
+  margin-bottom: 54px;
 }
+
 .main-city{
   display: flex;
   flex-direction: row;
@@ -451,7 +446,6 @@ a.sort-active:hover{
   margin-bottom: 60px;
 }
 .this-towns{
-  height: 166px;
   width: 307px;
   margin: 0 auto;
   text-align: center;
@@ -469,10 +463,8 @@ a.sort-active:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 .main-bridges{
-    height: 166px;
     width: 307px;
     margin: 0 auto;
     text-align: center;
@@ -485,7 +477,6 @@ a.sort-active:hover{
 .main-lists{
   margin-top: 48px;
   width: 313px;
-  height: 166px;
   text-align: center;
 }
 .main-lists h3{
@@ -511,7 +502,6 @@ a.sort-active:hover{
 }
 .main-map{
   display: flex;
-  height: 594px;
 }
 .search{
   position: absolute;
@@ -542,23 +532,28 @@ a.sort-active:hover{
 }
 /*inner*/
 .main-filter{
-  min-height: 218px;
 }
 .main-search-menu{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 .menu{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-self: center;
-  min-height: 160px;
-  width: 240px;
-  margin: 32px auto;
   margin-left: 72px;
+  padding-bottom: 30px;
+}
+.menu h3{
+  padding-top: 28px;
+}
+.menu label{
+  padding-top: 28px;
+}
+.menu img{
+  position: absolute;
 }
 .main-sort{
   margin: auto 72px;
@@ -580,29 +575,33 @@ a.sort-active:hover{
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   margin: auto 72px;
-  min-height: 150px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+}
+.hotel img{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.hotel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .list-hotels-sheet,
 .list-motel-sheet,
 .list-apartments-sheet{
+  width: 890px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .list{
   display: flex;
   flex-direction: column;
-  width: 262px;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
-.list-sheet-rating{
-  display: flex;
-  align-items: flex-end;
-}
-
-
 
 
 
