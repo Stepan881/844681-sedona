@@ -1,5 +1,6 @@
+html,
 body{
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -8,9 +9,20 @@ body{
   color: #000000;
   text-transform: uppercase;
   background-color: #f2f2f2;
+  max-width: 1200px;
 }
 a{
   text-decoration: none;
+}
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
 }
 .main-header{
   background-color: #ffffff;
@@ -44,14 +56,19 @@ a{
   color: #766357;
 }
 /*main*/
+.main{
+  background-color: #ffffff;
+}
 .main-intro{
   position: relative;
   width: 100%;
   height: 508px;
 }
 .main-in{
-  position: absolute;
-  background: url("../img/background-photo.jpg");
+  position: relative;
+  background: url("../img/welcome.png") 370px 71px no-repeat,
+              url("../img/polygon.png") 0 450px no-repeat,
+              url("../img/background-photo.jpg") 0 -88px;
   background-repeat: no-repeat;
   width: 100%;
   height: 508px;
@@ -91,7 +108,6 @@ a{
   background-color: #81b3d2;
   color: #ffffff;
 }
-
 .main-info-search h3{
   margin: 0;
   padding: 0;
@@ -106,11 +122,9 @@ a{
   line-height: 24px;
   font-weight: 400;
 }
-.main-service{
-  display:inline-block;
-  vertical-align: middle;}
+.main-list{
+  background-color: #eeeeee;
 }
-
 .main-lists{
   display:inline-block;
   vertical-align: middle;
@@ -178,6 +192,9 @@ a{
   background-color: #669ec0;
   color: rgba(255, 255, 255, 0.3);
 }
+.search-forms p{
+  margin: 0;
+}
 /*футер*/
 .footers{
   background-color: rgba(249, 251, 246, 0.9);
@@ -223,11 +240,12 @@ a{
 /**/
 /*inner*/
 .main-filter{
-  background: url("../img/filter-background.jpg");
-  background-repeat: no-repeat;
+  background: url("../img/filter-background.jpg") 0 -376px no-repeat;
+
   width: 100%;
   background-color: #5496bd;
   color: #ffffff;
+  min-height: 48px;
 }
 .main-filter h3{
   margin: 0;
@@ -264,6 +282,13 @@ a{
 .main-filter button:hover{
   background-color: #ffffff;
   color: #000000;
+}
+.main-price ul{
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  width: 314px;
+
 }
 .main-sert{
   background-color: #fefefe;
@@ -308,7 +333,6 @@ a.sort-active:hover{
   color: #81b3d2;
   text-decoration: none;
 }
-
 .list-hotel h2{
   font-size: 21px;
   line-height: 26px;
@@ -345,7 +369,6 @@ a.sort-active:hover{
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
-
 .list-sheet-reservation a{
   padding: 4px 8px;
   background-color: #766357;
@@ -368,7 +391,215 @@ a.sort-active:hover{
   line-height: 21px;
   font-weight: 400;
   background-color: #f2f2f2;
+}
 
+/*Сетка*/
+.main-header{
+  min-height: 56px;
+  min-width: 1200px;
+}
+.main-navigation{
+  display: flex;
+  width: 1200px;
+}
+.main-header-logo{
+  position:absolute;
+  align-items: center;
+  flex-direction: column;
+  top: -1px;
+  z-index: 2;
+  left: 50%;
+  margin-left: -70px;
+}
+.site-navigation{
+  display: flex;
+  justify-content: space-between;
+  margin: 14px auto;
+  width: 1200px;
+  text-align: center;
+}
+.site-navigation li{
+  width: 239px;
+}
+.main-intro{
+  min-height: 510px;
+}
+.main-in{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main-info{
+  min-height: 216px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-info h2,
+.main-info p{
+  width: 636px;
+  text-align: center;
+}
+.main-info h2{
+  margin-top: 52px;
+  margin-bottom: 36px;
+}
+.main-city{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.this-towns{
+  height: 166px;
+  width: 307px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main-services{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 85px;
+}
+.main-service{
+  width: 304px;
+  text-align: center;
+}
+.main-bridge{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.main-bridges{
+    height: 166px;
+    width: 307px;
+    margin: 0 auto;
+    text-align: center;
+}
+.main-list{
+  display: flex;
+  justify-content: space-around;
+  min-height: 256px;
+}
+.main-lists{
+  margin-top: 48px;
+  width: 313px;
+  height: 166px;
+  text-align: center;
+}
+.main-lists h3{
+  margin: 0;
+  padding: 0;
+}
+.pupup{
+  position: relative;
+}
+.main-info-search{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.main-info-search h3{
+  margin-top: 54px;
+  margin-bottom: 28px;
+}
+.main-info-search p{
+  margin-bottom: 50px;
+}
+.main-map{
+  display: flex;
+  height: 594px;
+}
+.search{
+  position: absolute;
+  left: 316px;
+  top: 292px;
+}
+.footers{
+  display: flex;
+  justify-content: space-between;
+  min-height: 120px;
+}
+.footer{
+  flex-direction: column;
+  align-self: center;
+}
+.footer li{
+  display: inline;
+}
+.footer-visit{
+  margin-left: 72px;
+}
+.footer-logo{
+  margin-right: 72px;
+}
+.social-button img{
+  width: 26px; /* 46px */
+  height: 28px; /* 48px */
+}
+/*inner*/
+.main-filter{
+  min-height: 218px;
+}
+.main-search-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  min-height: 160px;
+  width: 240px;
+  margin: 32px auto;
+  margin-left: 72px;
+}
+.main-sort{
+  margin: auto 72px;
+  min-height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-sort ul{
+  margin: auto 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.main-sorts{
+  display: flex;
+  align-self: flex-end;
+}
+.hotel{
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  margin: auto 72px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+}
+.list-hotels-sheet,
+.list-motel-sheet,
+.list-apartments-sheet{
+  display: flex;
+  align-items: center;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  width: 262px;
+  flex-wrap: wrap;
+}
+
+.list-sheet-rating{
+  display: flex;
+  align-items: flex-end;
 }
 
 
@@ -381,12 +612,4 @@ a.sort-active:hover{
 
 
 
-
-
-
-
-
-
-
-
-/*------*/
+/*400+800 256*/

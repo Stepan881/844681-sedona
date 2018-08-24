@@ -17,9 +17,7 @@
           <li><a href="#" aria-label="Информация">Информация</a></li>
           <li><a href="#" aria-label="Фото и видео">Фото и видео</a></li>
           <li><a href="#" aria-label="Карта штата">Карта штата</a></li>
-          <li  class="navigation-active">
-            <a aria-label="Гостиницы">Гостиницы</a>
-          </li>
+          <li class="navigation-active"><a aria-label="Гостиницы">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -27,7 +25,7 @@
     <main>
       <section class="main-filter">
         <form class="main-search-menu" action="https://echo.htmlacademy.ru" method="post" oninput="out.value=outs.value">
-          <div class="main-infrastructure">
+          <div class="menu main-infrastructure">
             <h3>Инфраструктура</h3>
             <label for="pool">
               <input type="checkbox" class="visually-hidden" name="pool" id="pool" aria-label="Бассеин" checked>
@@ -45,7 +43,7 @@
               WI-FI
             </label>
           </div>
-          <div class="main-type-accommodation">
+          <div class="menu main-type-accommodation">
             <h3>Тип жилья:</h3>
             <label for="hotel">
               <input type="checkbox" class="visually-hidden" name="hotel" id="hotel" aria-label="Гостинница" checked>
@@ -63,7 +61,7 @@
               Апартаменты
             </label>
           </div>
-          <div class="main-price">
+          <div class="menu main-price">
             <h3>Стоимость в сутки (Р):</h3>
             <ul>
               <li>от 0</li>
@@ -97,19 +95,21 @@
       </section>
 
       <section class="list-hotel">
-        <article class="list-hotels">
+        <article class="hotel list-hotels">
           <img src="img/hotels.jpg" width="135" height="90" alt="Гостинница">
           <div class="list-hotels-sheet">
-            <h2><a href="#">Amara Resort & Spa</a></h2>
-            <div class="list-sheet-more">
-              <span>Гостиница</span>
-              <a href="#">Подробнее</a>
+            <div class="list">
+              <h2><a href="#">Amara Resort & Spa</a></h2>
+              <div class="list-sheet-more">
+                <span>Гостиница</span>
+                <a href="#">Подробнее</a>
+              </div>
+              <div class="list-sheet-reservation">
+                <span>от 4000</span>
+                <a href="#">Забронировать</a>
+              </div>
             </div>
-            <div class="list-sheet-reservation">
-              <span>от 4000</span>
-              <a href="#">Забронировать</a>
-            </div>
-            <div class="list-sheet-rating">
+            <div class="list list-sheet-rating">
               <span>
                 <img src="img/svg/star.svg" alt="звезда">
                 <img src="img/svg/star.svg" alt="звезда">
@@ -120,19 +120,21 @@
             </div>
           </div>
         </article>
-        <article class="list-motel">
+        <article class="hotel list-motel">
           <img src="img/motel.jpg" width="135" height="90" alt="Мотель">
           <div class="list-motel-sheet">
-            <h2><a href="#">Desert Quail Inn</a></h2>
-            <div class="list-sheet-more">
-              <span>Мотель</span>
-              <a href="#">Подробнее</a>
+            <div class="list">
+              <h2><a href="#">Desert Quail Inn</a></h2>
+              <div class="list-sheet-more">
+                <span>Мотель</span>
+                <a href="#">Подробнее</a>
+              </div>
+              <div class="list-sheet-reservation">
+                <span>от 3000</span>
+                <a href="#">Забронировать</a>
+              </div>
             </div>
-            <div class="list-sheet-reservation">
-              <span>от 3000</span>
-              <a href="#">Забронировать</a>
-            </div>
-            <div class="list-sheet-rating">
+            <div class="list list-sheet-rating">
               <span>
                 <img src="img/svg/star.svg" alt="звезда">
                 <img src="img/svg/star.svg" alt="звезда">
@@ -142,19 +144,21 @@
             </div>
           </div>
         </article>
-        <article class="list-apartments">
+        <article class="hotel list-apartments">
           <img src="img/apartments.jpg" width="135" height="90" alt="Апартаменты">
           <div class="list-apartments-sheet">
-            <h2><a href="#">Villas at Poco Diablo</a></h2>
-            <div class="list-sheet-more">
-              <span>Апартаменты</span>
-              <a href="#">Подробнее</a>
+            <div class="list">
+              <h2><a href="#">Villas at Poco Diablo</a></h2>
+              <div class="list-sheet-more">
+                <span>Апартаменты</span>
+                <a href="#">Подробнее</a>
+              </div>
+              <div class="list-sheet-reservation">
+                <span>от 2000</span>
+                <a href="#">Забронировать</a>
+              </div>
             </div>
-            <div class="list-sheet-reservation">
-              <span>от 2000</span>
-              <a href="#">Забронировать</a>
-            </div>
-            <div class="list-sheet-rating">
+            <div class="list list-sheet-rating">
               <span>
                 <img src="img/svg/star.svg" alt="звезда">
                 <img src="img/svg/star.svg" alt="звезда">
