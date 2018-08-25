@@ -1,15 +1,14 @@
 html,
 body{
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
-  font-weight: bold;
-  color: #000000;
+
   text-transform: uppercase;
-  background-color: #f2f2f2;
-  max-width: 1200px;
+  background-color: #c0c0c0;
+
 }
 a{
   text-decoration: none;
@@ -192,7 +191,10 @@ a{
 }
 /*футер*/
 .footers{
-  background-color: rgba(249, 251, 246, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 72px;
+  width: 1056px;
+  margin: auto;
 }
 .footer-visit a,
 .footer-visit a:active,
@@ -390,7 +392,8 @@ a.sort-active:hover{
 
 /*Сетка*/
 .main-header{
-  min-width: 1200px;
+  width: 1200px;
+  margin: 0 auto;
 }
 .main-navigation{
   display: flex;
@@ -398,25 +401,39 @@ a.sort-active:hover{
 }
 .main-header-logo{
   position:absolute;
-  align-items: center;
-  flex-direction: column;
   top: -1px;
   z-index: 2;
   left: 50%;
   margin-left: -70px;
 }
 .site-navigation{
+  margin: 14px auto;
   display: flex;
-  margin: 14px 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.site-navigation ul{
   width: 1200px;
-  text-align: center;
-
 }
 .site-navigation li{
-  width: 240px;
+  width: auto;
+  width: 168px;
 }
-.site-navigation li:nth-child(3){
-   margin-left: auto;
+.site-navigation li:nth-child(-n+2){
+  padding-left: 72px;
+}
+.site-navigation li:nth-child(+n+3){
+padding-right: 72px;
+text-align: right;
+}
+.site-navigation li:nth-child(2){
+  padding-right: 240px;
+
+}
+
+.main{
+  width: 1200px;
+  margin: 0 auto;
 }
 .main-in{
   display: flex;
@@ -443,7 +460,7 @@ a.sort-active:hover{
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 60px;
+
 }
 .this-towns{
   width: 307px;
@@ -453,6 +470,7 @@ a.sort-active:hover{
 .main-services{
   display: flex;
   justify-content: space-around;
+  margin-top: 60px;
   margin-bottom: 85px;
 }
 .main-service{
@@ -520,18 +538,14 @@ a.sort-active:hover{
 .footer li{
   display: inline;
 }
-.footer-visit{
-  margin-left: 72px;
-}
-.footer-logo{
-  margin-right: 72px;
-}
 .social-button img{
   width: 26px; /* 46px */
   height: 28px; /* 48px */
 }
 /*inner*/
 .main-filter{
+  width: 1200px;
+  margin: auto;
 }
 .main-search-menu{
   display: flex;
@@ -556,11 +570,14 @@ a.sort-active:hover{
   position: absolute;
 }
 .main-sort{
-  margin: auto 72px;
+  width: 1056px;
+  margin: auto;
+  padding: 0 72px;
   min-height: 88px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fefefe;
 }
 .main-sort ul{
   margin: auto 15px;
@@ -571,21 +588,23 @@ a.sort-active:hover{
   display: flex;
   align-self: flex-end;
 }
+.list-hotel{
+  width: 1056px;
+  margin: auto;
+  padding: 0 72px;
+
+  background-color: #fefefe;
+}
 .hotel{
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-  margin: auto 72px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .hotel img{
   padding-top: 30px;
   padding-bottom: 30px;
-}
-.hotel{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 .list-hotels-sheet,
 .list-motel-sheet,
@@ -596,6 +615,7 @@ a.sort-active:hover{
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 30px;
+
 }
 .list{
   display: flex;
@@ -603,6 +623,11 @@ a.sort-active:hover{
   justify-content: space-between;
 }
 
+.list img,
+.list span:nth-child(1){
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
 
 
 
