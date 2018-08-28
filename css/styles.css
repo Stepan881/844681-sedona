@@ -7,7 +7,7 @@ body{
   line-height: 21px;
 
   text-transform: uppercase;
-  background-color: #c0c0c0;
+  background-color: #f2f2f2;
 
 }
 a{
@@ -25,8 +25,6 @@ a{
 }
 .main-header{
   background-color: #ffffff;
-}
-.main-navigation{
 }
 .site-navigation{
   margin: 0;
@@ -69,14 +67,11 @@ a{
   background-repeat: no-repeat;
   width: 100%;
   padding-top: 508px;
-  margin-bottom: 60px;
 }
 .main-intro img{
   margin-top: 76px;
   left: 50%;
   top: 50%;
-}
-.visually-hidden{
 }
 .main-info h2{
   font-size: 21px;
@@ -106,7 +101,11 @@ a{
   background-color: #81b3d2;
   color: #ffffff;
 }
-.main-info-search h3{
+
+.main-info{
+  padding-top: 60px;
+}
+.main-info-search h2{
   margin: 0;
   padding: 0;
   font-size: 30px;
@@ -205,7 +204,6 @@ a{
   font-weight: 700;
 }
 .social{
-    text-align: center;
     margin: 0;
     padding: 0;
 }
@@ -338,10 +336,10 @@ a.sort-active:hover{
 .list-hotels-btn{
   color: #000000;
 }
-.list-hotel h2 a:hover{
+.list-hotels-btn:hover{
   color: #81b3d2;
 }
-.list-hotel h2 a:active{
+.list-hotels-btn:active{
   color: rgba(0, 0, 0, 0.3);
 }
 .list-hotel span{
@@ -423,8 +421,8 @@ a.sort-active:hover{
   padding-left: 72px;
 }
 .site-navigation li:nth-child(+n+3){
-padding-right: 72px;
-text-align: right;
+  padding-right: 72px;
+  text-align: right;
 }
 .site-navigation li:nth-child(2){
   padding-right: 240px;
@@ -435,72 +433,116 @@ text-align: right;
   width: 1200px;
   margin: 0 auto;
 }
-.main-in{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 .main-info{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.main-info h2,
-.main-info p{
   width: 636px;
+  margin: 0 auto;
+}
+.main-info h2{
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 34px;
+  margin: 0 92px;
+  padding-bottom: 34px;
 }
 .main-info p{
-  margin-bottom: 54px;
+  text-align: center;
+  margin: 0 68px;
+  padding-bottom: 54px;
 }
 
+/*------------*/
 .main-city{
   display: flex;
   flex-direction: row;
-  align-items: center;
-
 }
 .this-towns{
-  width: 307px;
-  margin: 0 auto;
+  margin: 46px 40px;
   text-align: center;
+  width: 400px;
 }
+.this-towns h3{
+  margin: 0 90px 23px;
+}
+.this-towns span{
+  display: inline-block;
+  margin: 0 120px 20px;
+}
+.this-towns p{
+  padding: 0 10px 12px;
+}
+/*------------*/
 .main-services{
   display: flex;
   justify-content: space-around;
-  margin-top: 60px;
-  margin-bottom: 85px;
+  padding-top: 162px;
 }
 .main-service{
+  position: relative;
   width: 304px;
+  min-height: 166px;
   text-align: center;
+  padding: 0 48px;
+
 }
+.main-service h3{
+  margin: 0;
+  margin-bottom: 24px;
+}
+.main-service img{
+  position: absolute;
+  bottom: 195px;
+  left: 163px;
+}
+/*------------*/
 .main-bridge{
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 .main-bridges{
-    width: 307px;
-    margin: 0 auto;
-    text-align: center;
+  margin-top: 46px;
+  margin-left: 48px;
+  margin-right: 48px;
+  margin-bottom: 41px;
+  text-align: center;
+  width: 400px;
 }
+.main-bridges h3{
+  margin: 0 72px 24px;
+}
+.main-bridges span{
+  display: inline-block;
+  margin: 0 120px 27px;
+}
+/*------------*/
 .main-list{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: 256px;
 }
 .main-lists{
-  margin-top: 48px;
-  width: 313px;
   text-align: center;
+  min-width: 400px;
+  margin-top: 43px;
 }
 .main-lists h3{
-  margin: 0;
-  padding: 0;
+  min-width: 130px;
+  margin: 0 135px 24px;
 }
+.main-lists span{
+  display: inline-block;
+  min-width: 50px;
+  margin: 0 173px 26px;
+}
+.main-lists p{
+  min-width: 268px;
+  margin: 0 66px 26px;
+}
+.main-lists:nth-child(3) p{
+  min-width: 254px;
+  margin: 0 74px 26px;
+}
+/*------------*/
 .pupup{
   position: relative;
 }
@@ -518,14 +560,102 @@ text-align: right;
 .main-info-search p{
   margin-bottom: 50px;
 }
+/*------------*/
 .main-map{
   display: flex;
+  background: url("../img/map.jpg") 0 -150px; no-repeat;
+  min-width: 1200px;
+  min-height: 472px;
+}
+.map-iframe iframe{
+  min-width: 1200px;
+  min-height: 472px;
+  display: block;
 }
 .search{
   position: absolute;
   left: 316px;
-  top: 292px;
+  top: 287px;
+  min-height: 403px;
+  min-width: 568px;
+  margin: 0;
+  padding: 0;
 }
+.search-forms{
+  min-width: 460px;
+  min-height: 287px;
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.search-forms p{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 29px;
+}
+.search-forms input{
+  width: 334px;
+  height: 38px;
+  border: inherit;
+  outline:none;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+
+}
+.search-forms .search-adults{
+  display: flex;
+  justify-content: flex-end;
+}
+.search-forms svg{
+  position: absolute;
+  right: 65px;
+}
+.search-adults input{
+  width: 102px;
+  text-align: center;
+  padding: 0 6px;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.adults-label{
+  padding-right: 41px;
+}
+.children-label{
+  padding-right: 27px;
+  padding-left: 52px;
+}
+p.search-adults{
+  margin-bottom: 54px;
+}
+.search-forms button{
+  min-height: 58px;
+  min-width: 458px;
+}
+
+.search-forms input:hover,
+.search-arrival:hover path,
+.date-departure:hover path{
+  fill: #8f8f8f;
+  background-color: #ebebeb;
+}
+
+.search-forms input:focus,
+.search-arrival:focus path,
+.date-departure:focus path{
+  background-color: #ffffff;
+  fill: #81b3d2;
+  box-shadow: inset 0 0 2px #e5e5e5;
+}
+/*------------*/
 .footers{
   display: flex;
   justify-content: space-between;
@@ -534,15 +664,69 @@ text-align: right;
 .footer{
   flex-direction: column;
   align-self: center;
+  flex-direction: row;
+}
+.footer-visit{
+  text-align: left;
+  min-width: 240px;
+  padding-left: 61px;
+}
+.social{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  min-width: 400px;
+}
+.footer-logo{
+  display: inline;
+  text-align: right;
+  min-width: 240px;
+  padding-right: 7px;
 }
 .footer li{
   display: inline;
 }
-.social-button img{
-  width: 26px; /* 46px */
-  height: 28px; /* 48px */
+.social-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
 }
-/*inner*/
+.social-button:hover{
+  background-color: #669ec0;
+}
+.social-button:active,
+.social-button:active path{
+  background-color: #5496bd;
+  fill: rgba(255, 255, 255, 0.3);
+}
+.social ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+}
+.social li{
+  margin: 0 3px;
+}
+.footer-logo a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo svg{
+  margin-left: 6px;
+}
+.footer-logo:hover path{
+  fill: #81b3d2;
+}
+.footer-logo:active path{
+  fill: #bdbbbc;
+}
+/*inner  */
 .main-filter{
   width: 1200px;
   margin: auto;
@@ -589,15 +773,18 @@ text-align: right;
   align-self: flex-end;
 }
 .list-hotel{
-  width: 1056px;
+  width: 1200px;
   margin: auto;
-  padding: 0 72px;
 
-  background-color: #fefefe;
+
+
 }
 .hotel{
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  /* border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; */
+  background-color: #fefefe;
+  margin: 2px auto;
+  padding: 0 72px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
