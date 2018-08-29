@@ -65,11 +65,17 @@
             <h3>Стоимость в сутки (Р):</h3>
             <ul>
               <li>от 0</li>
-              <li>
+              <li>до
                 <output name="out">3000</output>
               </li>
             </ul>
-            <input type="range" name="outs" min="0" max="4000" step="100" value="3000">
+            <input class="visually-hidden"type="range" name="outs" min="0" max="4000" step="100" value="3000">
+
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
             <button type="submit" name="button" title="Показать" value="Показать">Показать</button>
           </div>
         </form>
@@ -85,11 +91,19 @@
           <li><a href="#">По рейтингу</a></li>
         </ul>
         <ul class="main-sorts">
-          <li><a href="#" aria-label="Сортировка по возрастанию" title="Сортировка по возрастанию">
-            <img src="img/svg/icon-up-dir.svg" alt="Сортировка по возрастанию"></a>
+          <li>
+            <a href="#" aria-label="Сортировка по возрастанию" title="Сортировка по возрастанию">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+              </svg>
+            </a>
           </li>
-          <li><a href="#" aria-label="Сортировка по убыванию" title="Сортировка по убыванию">
-            <img src="img/svg/icon-down-dir.svg" alt="Сортировка по убыванию"></a>
+          <li>
+            <a href="#" aria-label="Сортировка по убыванию" title="Сортировка по убыванию">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#81b3d2" d="M5.5 10L0 0h11"/>
+              </svg>
+            </a>
           </li>
         </ul>
       </section>
@@ -100,17 +114,19 @@
           <div class="list-hotels-sheet">
             <div class="list">
               <h2><a class="list-hotels-btn" href="#">Amara Resort & Spa</a></h2>
-              <div class="list-sheet-more">
-                <span>Гостиница</span>
-                <a href="#">Подробнее</a>
-              </div>
-              <div class="list-sheet-reservation">
-                <span>от 4000</span>
-                <a href="#">Забронировать</a>
-              </div>
+              <div class="list-row">
+                <div class="list-sheet-more">
+                  <span>Гостиница</span>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="list-sheet-reservation">
+                  <span>от 4000 Р.</span>
+                  <a href="#">Забронировать</a>
+                </div>
             </div>
+          </div>
             <div class="list list-sheet-rating">
-              <span>
+              <span class="stars">
                 <img src="img/svg/star.svg" alt="звезда">
                 <img src="img/svg/star.svg" alt="звезда">
                 <img src="img/svg/star.svg" alt="звезда">
@@ -125,13 +141,15 @@
           <div class="list-motel-sheet">
             <div class="list">
               <h2><a class="list-hotels-btn" href="#">Desert Quail Inn</a></h2>
-              <div class="list-sheet-more">
-                <span>Мотель</span>
-                <a href="#">Подробнее</a>
-              </div>
-              <div class="list-sheet-reservation">
-                <span>от 3000</span>
-                <a href="#">Забронировать</a>
+                <div class="list-row">
+                <div class="list-sheet-more">
+                  <span>Мотель</span>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="list-sheet-reservation">
+                  <span>от 3000 Р.</span>
+                  <a href="#">Забронировать</a>
+                </div>
               </div>
             </div>
             <div class="list list-sheet-rating">
@@ -149,13 +167,15 @@
           <div class="list-apartments-sheet">
             <div class="list">
               <h2><a class="list-hotels-btn" href="#">Villas at Poco Diablo</a></h2>
-              <div class="list-sheet-more">
-                <span>Апартаменты</span>
-                <a href="#">Подробнее</a>
-              </div>
-              <div class="list-sheet-reservation">
-                <span>от 2000</span>
-                <a href="#">Забронировать</a>
+              <div class="list-row">
+                <div class="list-sheet-more">
+                  <span>Апартаменты</span>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="list-sheet-reservation">
+                  <span>от 2000 Р.</span>
+                  <a href="#">Забронировать</a>
+                </div>
               </div>
             </div>
             <div class="list list-sheet-rating">
