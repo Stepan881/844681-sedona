@@ -10,6 +10,17 @@ body{
   background-color: #f2f2f2;
 
 }
+.content{
+  position: relative;
+  min-width: 1200px;
+}
+.main-header,
+.main{
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1),
+              0 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
 a{
   text-decoration: none;
 }
@@ -23,6 +34,7 @@ a{
   border: 0;
   padding: 0;
 }
+
 .main-header{
   background-color: #ffffff;
   min-width: 56px;
@@ -62,9 +74,9 @@ a{
 }
 .main-in{
   position: relative;
-  background: url("../img/welcome.png") 370px 78px no-repeat,
+  background: url("../img/welcome.png") 370px 76px no-repeat,
               url("../img/polygon.png") 0 450px no-repeat,
-              url("../img/background-photo.jpg") 0 -80px no-repeat;
+              url("../img/background-photo.jpg") 0 -83px no-repeat;
   width: 100%;
   padding-top: 508px;
 }
@@ -101,7 +113,11 @@ a{
   background-color: #81b3d2;
   color: #ffffff;
 }
-
+.main-city img{
+  object-fit: cover;
+  width: 800px;
+  height: 256px;
+}
 .main-info{
   padding-top: 60px;
 }
@@ -166,6 +182,7 @@ a{
   font: inherit;
   background-color: #f2f2f2;
   width: 346px;
+  text-transform: uppercase;
 }
 .search-forms button{
   width: 458px;
@@ -191,8 +208,7 @@ a{
 /*футер*/
 .footers{
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 0 72px;
-  width: 1056px;
+  width: 1200px;
   margin: auto;
 }
 .footer-visit a,
@@ -235,7 +251,7 @@ a{
 /**/
 /*inner*/
 .main-filter{
-  background: url("../img/filter-background.jpg") 0 -376px no-repeat;
+  background: url("../img/filter-background.jpg") 0 -294px no-repeat;
   width: 100%;
   background-color: #5496bd;
   color: #ffffff;
@@ -261,8 +277,11 @@ a{
   line-height: 21px;
   font-weight: 400;
 }
-.main-filter li{
-  margin-left: 15px;
+.main-filter li:nth-child(1){
+  margin-left: 40px;
+}
+.main-filter li:nth-child(2){
+  margin-left: 20px;
 }
 .main-filter button{
   width: 138px;
@@ -307,37 +326,44 @@ a{
   line-height: 18px;
   font-weight: 400;
   color: #000000;
-
 }
 .main-sort b{
   color: #000000;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-
+  margin-top: 3px;
 }
 .main-sort a{
   color: rgba(0, 0, 0, 0.3);
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-decoration-color: #81b3d2;
+  text-decoration: none;
 }
-.main-sort a:hover{
+.main-sort a:hover,
+.main-sort path:hover{
   color: #81b3d2;
-  text-decoration: underline;
-  text-decoration-style: dashed;
+  text-decoration: none;
+  fill: #231f20;
 }
-.main-sort a:active{
+.main-sort a:active,
+.main-sort path:active{
   color: #000000;
   text-decoration: none;
+  fill: #81b3d2;
+}
+.sorts-active{
+  border-bottom: 1px dotted #81b3d2;
+}
+.sorts-active:hover{
+  border-bottom: 1px dotted #81b3d2;
+}
+.sorts-active:active{
+  border-bottom: 0;
 }
 a.sort-active,
 a.sort-active:hover{
   color: #81b3d2;
   text-decoration: none;
 }
-
-
 .list-hotel h2{
   font-size: 21px;
   line-height: 26px;
@@ -469,12 +495,12 @@ a.sort-active:hover{
 .main-info h2{
   text-align: center;
   margin: 0 92px;
-  padding-bottom: 34px;
+  padding-bottom: 31px;
 }
 .main-info p{
   text-align: center;
   margin: 0 68px;
-  padding-bottom: 54px;
+  padding-bottom: 52px;
 }
 
 /*------------*/
@@ -488,7 +514,7 @@ a.sort-active:hover{
   width: 400px;
 }
 .this-towns h3{
-  margin: 0 90px 23px;
+  margin: 0 90px 25px;
 }
 .this-towns span{
   display: inline-block;
@@ -501,12 +527,12 @@ a.sort-active:hover{
 .main-services{
   display: flex;
   justify-content: space-around;
-  padding-top: 162px;
+  padding-top: 161px;
 }
 .main-service{
   position: relative;
   width: 304px;
-  min-height: 166px;
+  min-height: 168px;
   text-align: center;
   padding: 0 48px;
 
@@ -517,14 +543,25 @@ a.sort-active:hover{
 }
 .main-service img{
   position: absolute;
-  bottom: 195px;
+  bottom: 196px;
   left: 163px;
+}
+.main-service:nth-child(3) img{
+  position: absolute;
+  bottom: 196px;
+  left: 165px;
 }
 /*------------*/
 .main-bridge{
     display: flex;
     flex-direction: row;
 }
+.main-bridge img{
+    object-fit: cover;
+    width: 800px;
+    height: 256px;
+}
+
 .main-bridges{
   margin-top: 46px;
   margin-left: 48px;
@@ -534,11 +571,11 @@ a.sort-active:hover{
   width: 400px;
 }
 .main-bridges h3{
-  margin: 0 72px 24px;
+  margin: 0 72px 25px;
 }
 .main-bridges span{
   display: inline-block;
-  margin: 0 120px 20px;
+  margin: 0 120px 21px;
 }
 /*------------*/
 .main-list{
@@ -549,7 +586,7 @@ a.sort-active:hover{
 .main-lists{
   text-align: center;
   min-width: 400px;
-  margin-top: 43px;
+  margin-top: 48px;
 }
 .main-lists h3{
   min-width: 130px;
@@ -558,7 +595,7 @@ a.sort-active:hover{
 .main-lists span{
   display: inline-block;
   min-width: 50px;
-  margin: 0 173px 26px;
+  margin: 0 173px 21px;
 }
 .main-lists p{
   min-width: 268px;
@@ -580,21 +617,21 @@ a.sort-active:hover{
   text-align: center;
 }
 .main-info-search h3{
-  margin-top: 48px;
+  margin-top: 50px;
   margin-bottom: 24px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
 }
 .main-info-search p{
-  margin-bottom: 47px;
+  margin-bottom: 48px;
 }
 /*------------*/
 .main-map{
-  display: flex;
-  background: url("../img/map.jpg") 0 -150px; no-repeat;
+  background: url("../img/map.jpg") -18px -154px; no-repeat;
   min-width: 1200px;
-  min-height: 472px;
+  min-height: 594px;
+  z-index: 0;
 }
 .map-iframe iframe{
   min-width: 1200px;
@@ -604,7 +641,7 @@ a.sort-active:hover{
 .search{
   position: absolute;
   left: 316px;
-  top: 287px;
+  top: 292px;
   min-height: 403px;
   min-width: 568px;
   margin: 0;
@@ -622,8 +659,9 @@ a.sort-active:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
 }
+
 .search-forms input{
   width: 334px;
   height: 38px;
@@ -656,14 +694,16 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 .adults-label{
-  padding-right: 41px;
+  padding-right: 43px;
 }
 .children-label{
   padding-right: 27px;
   padding-left: 52px;
 }
 p.search-adults{
-  margin-bottom: 54px;
+  margin-top: 2px;
+  margin-bottom: 55px;
+  position: relative;
 }
 .search-forms button{
   min-height: 58px;
@@ -684,32 +724,48 @@ p.search-adults{
   fill: #81b3d2;
   box-shadow: inset 0 0 2px #e5e5e5;
 }
+
+
+
+
+
 /*------------*/
 .footers{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: 120px;
+  min-width: 1200px;
+
 }
 .footer{
   flex-direction: column;
   align-self: center;
 
 }
+.footers-index{
+  position: absolute;
+  margin-left: 50%;
+  left: -600px;
+  margin-top: -120px;
+  bottom: 0;
+  min-width: 1200px;
+
+}
 .footer-visit{
   text-align: left;
-  min-width: 240px;
-  margin-left: 60px;
+  min-width: 268px;
+  padding-left: 134px;
 }
 .social{
   display: flex;
   text-align: center;
-  margin: 0 auto;
-    min-width: 400px;
+  min-width: 400px;
 }
 .footer-logo{
   text-align: right;
-  min-width: 240px;
-  margin-right: 10px;
+  min-width: 200px;
+  margin-right: 100px;
+  margin-left: 98px;
 }
 .footer li{
   display: inline;
@@ -743,7 +799,8 @@ p.search-adults{
 .footer-logo a{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:  flex-end;
+
 }
 .footer-logo svg{
   margin-left: 6px;
@@ -756,6 +813,7 @@ p.search-adults{
 }
 /*inner  */
 .main-filter{
+
   width: 1200px;
   margin: auto;
 }
@@ -772,13 +830,22 @@ p.search-adults{
 
 }
 .main-infrastructure{
-  margin-left: 73px;
+  margin-left: 72px;
   min-width: 150px;
-  margin-right: 104px;
+  margin-right: 105px;
+}
+
+.main-infrastructure label:nth-child(3){
+  margin-top: 26px;
+}
+.main-type-accommodation label:nth-child(3){
+  margin-top: 26px;
 }
 .main-type-accommodation{
   min-width: 150px;
-
+}
+.main-type-accommodation label{
+  padding-left: 2px;
 }
 .main-price{
   min-width: 318px;
@@ -790,6 +857,7 @@ p.search-adults{
   align-items: center;
   min-height: 32px;
   margin-bottom: 20px;
+
 }
 .main-price h3{
   margin-bottom: 10px;
@@ -804,6 +872,46 @@ p.search-adults{
   background: #ffffff;
   transform: translate(-50%, -125%);
 }
+.main-price input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+.main-price li{
+
+}
+
+.pool{
+  position: relative;
+}
+.checkbox + .checkbox-pool{
+  position: absolute;
+  background-image: url("../img/svg/checkbox-off.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 23px;
+  left: -41px;
+  top: 0;
+  cursor: pointer;
+}
+.checkbox:checked + .checkbox-pool{
+  position: absolute;
+  background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 23px;
+  left: -41px;
+  top: 0;
+  cursor: pointer;
+}
+
+
+
 .scale {
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
@@ -813,7 +921,7 @@ p.search-adults{
   height: 2px;
   background: #ffffff;
 }
-.toggle {
+.toggle{
   position: absolute;
   top: 106px;
   width: 4px;
@@ -823,6 +931,7 @@ p.search-adults{
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
+  left: 0;
 }
 .toggle-min {
   left: 0;
@@ -830,6 +939,17 @@ p.search-adults{
 .toggle-max {
   left: 80%;
 }
+.toggle-min:hover {
+  left: -2px;
+  top: 104px;
+  border: 10px solid #ffffff;
+}
+.toggle-max:hover{
+  top: 104px;
+  left: 253px;
+  border: 10px solid #ffffff;
+}
+
 .main-price button{
   margin-top: 32px;
   margin-left: 85px;
@@ -866,7 +986,7 @@ p.search-adults{
   display: flex;
   background-color: #fefefe;
   margin-left: 40px;
-
+  margin-top: 3px;
 }
 .main-sort li{
   margin-right: 32px;
@@ -877,6 +997,7 @@ ul.main-sorts {
   margin: 0;
   margin-left: auto;
   background-color: #fefefe;
+  margin-top: 3px;
 }
 .main-sorts li{
   margin: 0;
