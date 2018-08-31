@@ -619,7 +619,6 @@ a.sort-active:hover{
   position: relative;
   min-height: 290px;
 }
-
 .main-info-search{
   display: flex;
   flex-direction: column;
@@ -639,18 +638,15 @@ a.sort-active:hover{
 }
 /*------------*/
 .main-map{
-  position: relative;
   background: url("../img/map.jpg") -18px -154px; no-repeat;
   min-width: 1200px;
   min-height: 594px;
   z-index: 0;
 }
 .map-iframe iframe{
-  position: absolute;
   min-width: 1200px;
   min-height: 472px;
   display: block;
-  top: 0;
 }
 
 
@@ -852,6 +848,7 @@ input::-webkit-inner-spin-button {
 .search-button:active polygon{
   fill: #81b3d2;
 }
+
 /*------------*/
 .footers{
   display: flex;
