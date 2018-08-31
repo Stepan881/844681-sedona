@@ -15,12 +15,6 @@ body{
   min-width: 1200px;
 }
 .main-header,
-.main{
-  margin: auto;
-  text-align: center;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1),
-              0 10px 15px 0 rgba(0, 0, 0, 0.1);
-}
 a{
   text-decoration: none;
 }
@@ -66,7 +60,19 @@ a{
 }
 /*main*/
 .main{
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1),
+              0 10px 15px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  width: 1200px;
+  margin: 0 auto;
+}
+.content{
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1),
+              0 10px 15px 0 rgba(0, 0, 0, 0.1);
+  width: 1200px;
+  margin: 0 auto;
 }
 .main-intro{
   position: relative;
@@ -353,10 +359,13 @@ a{
 }
 .sorts-active:hover{
   border-bottom: 1px dotted #81b3d2;
+  color: #81b3d2;
 }
 .sorts-active:active{
   border-bottom: 0;
+  color: #000000;
 }
+
 a.sort-active,
 a.sort-active:hover{
   color: #81b3d2;
@@ -384,8 +393,6 @@ a.sort-active:hover{
   line-height: 21px;
   font-weight: 400;
 }
-
-
 
 .list-sheet-more a{
   padding: 4px 16px;
@@ -442,10 +449,6 @@ a.sort-active:hover{
   width: 1200px;
   margin: 0 auto;
 }
-.main-navigation{
-  display: flex;
-  width: 1200px;
-}
 .main-header-logo{
   position:absolute;
   top: -1px;
@@ -453,6 +456,11 @@ a.sort-active:hover{
   left: 50%;
   margin-left: -70px;
 }
+.main-navigation{
+  display: flex;
+  width: 1200px;
+}
+
 .site-navigation{
   margin: 14px auto 16px;
 
@@ -479,10 +487,6 @@ a.sort-active:hover{
 
 }
 
-.main{
-  width: 1200px;
-  margin: 0 auto;
-}
 .main-info{
   display: flex;
   flex-direction: column;
@@ -525,29 +529,32 @@ a.sort-active:hover{
 .main-services{
   display: flex;
   justify-content: space-around;
-  padding-top: 161px;
+
 }
 .main-service{
   position: relative;
-  width: 304px;
+  min-width: 304px;
   min-height: 168px;
   text-align: center;
   padding: 0 48px;
 
 }
 .main-service h3{
-  margin: 0;
+  margin-top: 161px;
   margin-bottom: 24px;
 }
-.main-service img{
-  position: absolute;
-  bottom: 196px;
-  left: 163px;
+.main-service:nth-child(1){
+  background: url("../img/svg/icon-1.svg") 50% 60px no-repeat;
+
 }
-.main-service:nth-child(3) img{
-  position: absolute;
-  bottom: 196px;
-  left: 165px;
+.main-service:nth-child(2){
+  background: url("../img/svg/icon-3.svg") 50% 60px no-repeat;
+}
+.main-service:nth-child(3){
+  background: url("../img/svg/icon-2.svg") 50% 56px no-repeat;
+}
+.main-service p{
+  margin-bottom: 82px;
 }
 /*------------*/
 .main-bridge{
@@ -745,6 +752,7 @@ p.search-adults{
 
 
 button.search-button{
+  display: inline;
   position: absolute;
   margin: 0;
   padding: 0;
@@ -1127,10 +1135,12 @@ ul.main-sorts {
 .list{
   display: flex;
   flex-direction: column;
+  max-width: 750px;
 }
 .list-row{
   display: flex;
   flex-direction: row;
+  padding-bottom: 28px;
 }
 .list-row a{
   margin-top: 12px;
