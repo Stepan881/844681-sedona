@@ -167,8 +167,6 @@ a{
 }
 /* форма поиска*/
 .search{
-  width: 568px;
-
   background-color: #ffffff;
   text-align: center;
 }
@@ -181,7 +179,7 @@ a{
 .search-forms input{
   font: inherit;
   background-color: #f2f2f2;
-  width: 346px;
+  width: 344px;
   text-transform: uppercase;
 }
 .search-forms button{
@@ -338,14 +336,14 @@ a{
   color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
 }
-.main-sort a:hover,
-.main-sort path:hover{
+.sorts-bonding a:hover,
+.sorts-bonding path:hover{
   color: #81b3d2;
   text-decoration: none;
   fill: #231f20;
 }
-.main-sort a:active,
-.main-sort path:active{
+.sorts-bonding a:active,
+.sorts-bonding path:active{
   color: #000000;
   text-decoration: none;
   fill: #81b3d2;
@@ -642,14 +640,10 @@ a.sort-active:hover{
   position: absolute;
   left: 316px;
   top: 292px;
-  min-height: 403px;
-  min-width: 568px;
   margin: 0;
   padding: 0;
 }
 .search-forms{
-  min-width: 460px;
-  min-height: 287px;
   padding: 55px;
   display: flex;
   flex-direction: column;
@@ -663,29 +657,32 @@ a.sort-active:hover{
 }
 
 .search-forms input{
-  width: 334px;
+  width: 296px;
   height: 38px;
   border: inherit;
   outline:none;
   padding-left: 12px;
+  padding-right: 40px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-
 }
+
+
 .search-forms .search-adults{
   display: flex;
   justify-content: flex-end;
 }
 .search-forms svg{
   position: absolute;
-  right: 65px;
+  right: 5px;
+  top: 5px;
 }
 .search-adults input{
   width: 102px;
   text-align: center;
-  padding: 0 6px;
-
+  padding: 0 35px;
+  width: 45px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -701,15 +698,17 @@ input::-webkit-inner-spin-button {
   padding-left: 52px;
 }
 p.search-adults{
+  display: flex;
   margin-top: 2px;
   margin-bottom: 55px;
   position: relative;
 }
+
 .search-forms button{
   min-height: 58px;
   min-width: 458px;
 }
-
+/*Календарь*/
 .search-forms input:hover,
 .search-arrival:hover path,
 .date-departure:hover path{
@@ -721,12 +720,89 @@ p.search-adults{
 .search-arrival:focus path,
 .date-departure:focus path{
   background-color: #ffffff;
-  fill: #81b3d2;
   box-shadow: inset 0 0 2px #e5e5e5;
+}
+.date-departure:active path,
+.search-arrival:active path{
+  fill: #81b3d2;
+}
+
+.visually-hidden + button{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  min-width: 30px;
+  min-height: 30px;
+  width: 30px;
+  height: 30px;
+  right: 60px;
+  background-color: inherit;
+}
+.visually-hidden + button:active,
+.visually-hidden + button:hover{
+  background-color: inherit;
 }
 
 
+button.search-button{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  min-width: 10px;
+  min-height: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: inherit;
+}
 
+button.adults-minus{
+  left: 120px;
+  background: url("../img/svg/minus.png") 50% 50% no-repeat;
+}
+button.adults-plus{
+  left: 195px;
+    background: url("../img/svg/plus.png") 50% 50% no-repeat;
+}
+button.children-minus{
+  left: 353px;
+    background: url("../img/svg/minus.png") 50% 50% no-repeat;
+}
+button.children-plus{
+  left: 428px;
+    background: url("../img/svg/plus.png") 50% 50% no-repeat;
+}
+button.adults-minus:hover{
+  left: 120px;
+  background: url("../img/svg/minus-hover.png") 50% 50% no-repeat;
+}
+button.adults-plus:hover{
+  left: 195px;
+    background: url("../img/svg/plus-hover.png") 50% 50% no-repeat;
+}
+button.children-minus:hover{
+  left: 353px;
+    background: url("../img/svg/minus-hover.png") 50% 50% no-repeat;
+}
+button.children-plus:hover{
+  left: 428px;
+    background: url("../img/svg/plus-hover.png") 50% 50% no-repeat;
+}
+button.adults-minus:active{
+  left: 120px;
+  background: url("../img/svg/minus-active.png") 50% 50% no-repeat;
+}
+button.adults-plus:active{
+  left: 195px;
+    background: url("../img/svg/plus-active.png") 50% 50% no-repeat;
+}
+button.children-minus:active{
+  left: 353px;
+    background: url("../img/svg/minus-active.png") 50% 50% no-repeat;
+}
+button.children-plus:active{
+  left: 428px;
+    background: url("../img/svg/plus-active.png") 50% 50% no-repeat;
+}
 
 
 /*------------*/
@@ -909,8 +985,26 @@ p.search-adults{
   top: 0;
   cursor: pointer;
 }
-
-
+.checkbox:disabled + .checkbox-pool{
+  position: absolute;
+  background-image: url("../img/svg/checkbox-off-di.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 23px;
+  left: -41px;
+  top: 0;
+  cursor: pointer;
+}
+.checkbox:disabled:checked + .checkbox-pool{
+  position: absolute;
+  background-image: url("../img/svg/checkbox-on-di.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 23px;
+  left: -41px;
+  top: 0;
+  cursor: pointer;
+}
 
 .scale {
   height: 2px;
