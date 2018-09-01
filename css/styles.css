@@ -120,9 +120,10 @@ a{
   color: #ffffff;
 }
 .main-city img{
-  object-fit: cover;
+  object-fit: none;
   width: 800px;
   height: 256px;
+  object-position: 50% -78px;
 }
 .main-info{
   padding-top: 60px;
@@ -199,7 +200,7 @@ a{
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  outline: none;
+
 }
 .search-forms button:hover{
   background-color: #669ec0;
@@ -292,8 +293,8 @@ a{
   margin-left: 20px;
 }
 .main-filter button{
-  width: 138px;
-  height: 35px;
+  width: 137px;
+  height: 36px;
   font: inherit;
   text-transform: uppercase;
   border: 2px solid #ffffff;
@@ -302,6 +303,7 @@ a{
   line-height: 21px;
   font-weight: 400;
   background-color: transparent;
+  border-radius: 2px;
 }
 .main-filter button:hover{
   background-color: #ffffff;
@@ -312,7 +314,7 @@ a{
   display: flex;
   justify-content: space-around;
   width: 314px;
-
+  border-radius: 2px;
 }
 .main-sert{
   background-color: #fefefe;
@@ -566,9 +568,11 @@ a.sort-active:hover{
     flex-direction: row;
 }
 .main-bridge img{
-    object-fit: cover;
+    object-fit: none;
+    top: 4px;
     width: 800px;
     height: 256px;
+    object-position: 50% -76px;
 }
 
 .main-bridges{
@@ -654,14 +658,14 @@ a.sort-active:hover{
 .search{
   position: absolute;
   left: 316px;
-  top: 292px;
+  top: 291px;
   margin: 0;
   padding: 0;
   height: 395px;
   width: 568px;
 }
 .search-forms{
-  padding: 55px;
+  padding: 56px 55px 55px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -689,7 +693,7 @@ input::-webkit-inner-spin-button {
   width: 292px;
   height: 30px;
   border: inherit;
-  outline:none;
+  outline: none;
   padding-left: 11px;
   padding-right: 39px;
   margin-left: 5px;
@@ -716,23 +720,20 @@ input::-webkit-inner-spin-button {
   height: 25px;
   right: 62px;
   background-color: inherit;
-  outline:none;
 }
 .search-arrival button:hover{
   background-color: inherit;
-  outline:none;
 }
 .search-arrival-button:hover path{
   fill: #000000;
-  outline:none;
+
 }
 .search-arrival button:active{
   background-color: inherit;
-  outline:none;
+
 }
 .search-arrival-button:active path{
   fill: #81b3d2;
-  outline:none;
 }
 
 .date-departure button{
@@ -743,23 +744,23 @@ input::-webkit-inner-spin-button {
   height: 25px;
   right: 62px;
   background-color: inherit;
-  outline:none;
+
 }
 .date-departure button:hover{
   background-color: inherit;
-  outline:none;
+
 }
 .date-departure-button:hover path{
   fill: #000000;
-  outline:none;
+
 }
 .date-departure button:active{
   background-color: inherit;
-  outline:none;
+
 }
 .date-departure-button:active path{
   fill: #81b3d2;
-  outline:none;
+
 }
 
 .children-label{
@@ -779,7 +780,7 @@ input::-webkit-inner-spin-button {
   padding: 0;
   width: 38px;
   height: 38px;
-  outline: none;
+
   background-color: #f2f2f2;
 }
 .search-adults button:hover{
@@ -787,7 +788,7 @@ input::-webkit-inner-spin-button {
   padding: 0;
   width: 38px;
   height: 38px;
-  outline: none;
+
   background-color: #f2f2f2;
 }
 .search-adults button:active{
@@ -795,7 +796,7 @@ input::-webkit-inner-spin-button {
   padding: 0;
   width: 38px;
   height: 38px;
-  outline: none;
+
   background-color: #f2f2f2;
 }
 .search-adults input{
@@ -873,19 +874,24 @@ input::-webkit-inner-spin-button {
 }
 .footer-visit{
   text-align: left;
-  min-width: 268px;
-  padding-left: 134px;
+  min-width: 270px;
+  margin-left: 133px;
+  margin-top: -4px;
+
 }
 .social{
   display: flex;
   text-align: center;
   min-width: 400px;
+  margin-left: -6px;
+  margin-top: -2px;
 }
 .footer-logo{
   text-align: right;
   min-width: 200px;
-  margin-right: 100px;
+  margin-right: 101px;
   margin-left: 98px;
+  margin-top: -4px;
 }
 .footer li{
   display: inline;
@@ -923,7 +929,7 @@ input::-webkit-inner-spin-button {
 
 }
 .footer-logo svg{
-  margin-left: 6px;
+  margin-left: 8px;
 }
 .footer-logo:hover path{
   fill: #81b3d2;
@@ -1089,8 +1095,8 @@ input::-webkit-inner-spin-button {
 }
 
 .main-price button{
-  margin-top: 32px;
-  margin-left: 85px;
+  margin: 32px 85px 0;
+
 }
 .menu h3{
   margin-top: 27px;
