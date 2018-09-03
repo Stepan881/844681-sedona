@@ -1,5 +1,4 @@
-html,
-body{
+html{
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -8,11 +7,16 @@ body{
 
   text-transform: uppercase;
   background-color: #f2f2f2;
-
+  font-kerning: none;
 }
 .content{
   position: relative;
-  min-width: 1200px;
+  width: 1200px;
+  text-align: center;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1),
+              0 10px 15px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  margin: 0 auto;
 }
 .main-header,
 a{
@@ -60,27 +64,16 @@ a{
 }
 /*main*/
 .main{
-  margin: auto;
-  text-align: center;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1),
-              0 10px 15px 0 rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  width: 1200px;
-  margin: 0 auto;
+
 }
-.content{
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1),
-              0 10px 15px 0 rgba(0, 0, 0, 0.1);
-  width: 1200px;
-  margin: 0 auto;
-}
+
 .main-intro{
   position: relative;
   width: 100%;
 }
 .main-in{
   position: relative;
-  background: url("../img/welcome.png") 370px 76px no-repeat,
+  background: url("../img/welcome.png") 370px 75px no-repeat,
               url("../img/polygon.png") 0 450px no-repeat,
               url("../img/background-photo.jpg") 0 -83px no-repeat;
   width: 100%;
@@ -143,7 +136,7 @@ a{
   font-weight: 400;
 }
 .main-list{
-  background-color: #eeeeee;
+  background-color: rgba(238, 238, 238, 1.0);
 }
 .main-lists{
   display:inline-block;
@@ -188,6 +181,9 @@ a{
   background-color: #f2f2f2;
   width: 344px;
   text-transform: uppercase;
+}
+.search-forms input::placeholder{
+  color:#000000;
 }
 .search-forms button{
   width: 458px;
@@ -287,7 +283,7 @@ a{
   font-weight: 400;
 }
 .main-filter li:nth-child(1){
-  margin-left: 40px;
+  margin-left: 36px;
 }
 .main-filter li:nth-child(2){
   margin-left: 20px;
@@ -302,7 +298,7 @@ a{
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  background-color: transparent;
+  background: transparent;
   border-radius: 2px;
 }
 .main-filter button:hover{
@@ -401,7 +397,7 @@ a.sort-active:hover{
 }
 
 .list-sheet-more a{
-  padding: 4px 16px;
+  padding: 3px 16px;
   background-color: #81b3d2;
   color: #ffffff;
   font-size: 14px;
@@ -418,7 +414,7 @@ a.sort-active:hover{
   color: rgba(255, 255, 255, 0.3);
 }
 .list-sheet-reservation a{
-  padding: 4px 16px;
+  padding: 3px 16px;
   background-color: #766357;
   color: #ffffff;
   font-size: 14px;
@@ -480,6 +476,7 @@ a.sort-active:hover{
 .site-navigation li{
   width: auto;
   width: 168px;
+  text-align: left;
 }
 .site-navigation li:nth-child(-n+2){
   padding-left: 72px;
@@ -499,16 +496,17 @@ a.sort-active:hover{
   align-items: center;
   width: 636px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 1.0);
 }
 .main-info h2{
   text-align: center;
   margin: 0 92px;
-  padding-bottom: 31px;
+  padding-bottom: 30px;
 }
 .main-info p{
   text-align: center;
   margin: 0 68px;
-  padding-bottom: 52px;
+  padding-bottom: 53px;
 }
 
 /*------------*/
@@ -535,7 +533,7 @@ a.sort-active:hover{
 .main-services{
   display: flex;
   justify-content: space-around;
-
+  background-color: rgba(255, 255, 255, 1.0);
 }
 .main-service{
   position: relative;
@@ -629,6 +627,7 @@ a.sort-active:hover{
   justify-content: flex-end;
   align-items: center;
   text-align: center;
+  background-color: rgba(255, 255, 255, 1.0);
 }
 .main-info-search h3{
   margin-top: 50px;
@@ -642,7 +641,7 @@ a.sort-active:hover{
 }
 /*------------*/
 .main-map{
-  background: url("../img/map.jpg") -18px -154px; no-repeat;
+  background: url("../img/map.jpg") -18px -154px no-repeat;
   min-width: 1200px;
   min-height: 594px;
   z-index: 0;
@@ -669,6 +668,7 @@ a.sort-active:hover{
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: rgba(255, 255, 255, 1.0);
 }
 .search-forms p{
   display: flex;
@@ -719,17 +719,17 @@ input::-webkit-inner-spin-button {
   width: 25px;
   height: 25px;
   right: 62px;
-  background-color: inherit;
+  background: inherit;
 }
 .search-arrival button:hover{
-  background-color: inherit;
+  background: inherit;
 }
 .search-arrival-button:hover path{
   fill: #000000;
 
 }
 .search-arrival button:active{
-  background-color: inherit;
+  background: inherit;
 
 }
 .search-arrival-button:active path{
@@ -743,11 +743,11 @@ input::-webkit-inner-spin-button {
   width: 25px;
   height: 25px;
   right: 62px;
-  background-color: inherit;
+  background: inherit;
 
 }
 .date-departure button:hover{
-  background-color: inherit;
+  background: inherit;
 
 }
 .date-departure-button:hover path{
@@ -755,7 +755,7 @@ input::-webkit-inner-spin-button {
 
 }
 .date-departure button:active{
-  background-color: inherit;
+  background: inherit;
 
 }
 .date-departure-button:active path{
@@ -812,32 +812,29 @@ input::-webkit-inner-spin-button {
 .search-adults input:hover{
   margin: 0;
   padding: 0;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   outline: none;
   text-align: center;
-  background-color: #f2f2f2;
-  border: #f2f2f2;
+
 }
 .search-adults input:active{
   margin: 0;
   padding: 0;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   outline: none;
   text-align: center;
-  background-color: #f2f2f2;
-  border: #f2f2f2;
+
 }
 .search-adults input:focus{
   margin: 0;
   padding: 0;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   outline: none;
   text-align: center;
-  background-color: #f2f2f2;
-  border: #f2f2f2;
+
 }
 .children-plus svg{
   margin-left: 4px;
@@ -861,7 +858,7 @@ input::-webkit-inner-spin-button {
 .footer{
   flex-direction: column;
   align-self: center;
-
+  padding-top: -36px;
 }
 .footers-index{
   position: absolute;
@@ -948,6 +945,7 @@ input::-webkit-inner-spin-button {
   flex-direction: row;
   justify-content: flex-start;
   min-height: 217px;
+  text-align: left;
 }
 .menu{
   display: flex;
@@ -995,7 +993,7 @@ input::-webkit-inner-spin-button {
   left: 160px;
   width: 2px;
   height: 22px;
-  background: #ffffff;
+  background-color: #ffffff;
   transform: translate(-50%, -125%);
 }
 .main-price input {
@@ -1058,19 +1056,19 @@ input::-webkit-inner-spin-button {
 
 .scale {
   height: 2px;
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .bar {
   width: 80%;
   height: 2px;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 .toggle{
   position: absolute;
   top: 106px;
   width: 4px;
   height: 4px;
-  background: #ababab;
+  background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
@@ -1152,6 +1150,7 @@ ul.main-sorts {
 .list-hotel{
   width: 1200px;
   margin: auto;
+  text-align: left;
 }
 .hotel{
   background-color: #fefefe;
@@ -1168,7 +1167,7 @@ ul.main-sorts {
 .list-hotels-sheet,
 .list-motel-sheet,
 .list-apartments-sheet{
-  width: 890px;
+  width: 891px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1185,7 +1184,7 @@ ul.main-sorts {
   padding-bottom: 28px;
 }
 .list-row a{
-  margin-top: 12px;
+  margin-top: 13px;
 }
 .list-sheet-more,
 .list-sheet-reservation{
