@@ -687,7 +687,7 @@ a.sort-active:hover{
 .map-iframe iframe{
   display: block;
   min-width: 1200px;
-  min-height: 472px;
+  min-height: 594px;
   border: none;
 }
 @-webkit-keyframes bounce {
