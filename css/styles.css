@@ -411,6 +411,18 @@ a.sort-active:hover{
   line-height: 21px;
   font-weight: 400;
 }
+.list-sheet-more span{
+  word-wrap: break-word;
+  width: 110px;
+  margin-right: 7px;
+  background-color: red;
+}
+.list-sheet-reservation span{
+
+  word-wrap: break-word;
+  width: 141px;
+}
+
 .list-sheet-more a{
   margin-right: 7px;
   padding: 3px 16px;
@@ -481,6 +493,8 @@ a.sort-active:hover{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -789,7 +803,6 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   border: 2px solid #f2f2f2;
   background-color: #f2f2f2;
-
 }
 .search-forms input:hover{
   border: 2px solid #ebebeb;
@@ -1337,6 +1350,7 @@ ul.main-sorts {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 .list img,
 .list span:nth-child(1){
   padding: 0;

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css"> 
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -28,36 +28,36 @@
           <form class="main-search-menu" action="https://echo.htmlacademy.ru" method="post" oninput="out.value=outs.value">
             <div class="menu main-infrastructure">
               <h3>Инфраструктура:</h3>
-              <label for="pool">
-                <input type="checkbox" class="visually-hidden checkbox" name="pool" id="pool" aria-label="Бассеин" checked>
+              <label for="pool" tabindex="0">
+                <input type="checkbox" class="visually-hidden checkbox" name="pool" id="pool" aria-label="Бассеин" checked  tabindex="-1">
                 <span class="checkbox-pool"></span>
                 Бассеин
               </label>
-              <label for="parking">
-                <input type="checkbox" class="visually-hidden checkbox" name="parking" id="parking" aria-label="Парковка">
+              <label for="parking" tabindex="0">
+                <input type="checkbox" class="visually-hidden checkbox" name="parking" id="parking" aria-label="Парковка"  tabindex="-1">
                   <span class="checkbox-pool"></span>
                 Парковка
               </label>
-              <label for="wifi">
-                <input type="checkbox" class="visually-hidden checkbox" name="wifi" id="wifi" aria-label="WI-FI">
+              <label for="wifi" tabindex="0">
+                <input type="checkbox" class="visually-hidden checkbox" name="wifi" id="wifi" aria-label="WI-FI"  tabindex="-1">
                   <span class="checkbox-pool"></span>
                 WI-FI
               </label>
             </div>
             <div class="menu main-type-accommodation">
               <h3>Тип жилья:</h3>
-              <label for="hotel">
-                <input type="checkbox" class="visually-hidden checkbox" name="hotel" id="hotel" aria-label="Гостинница" checked>
+              <label for="hotel" tabindex="0">
+                <input type="checkbox" class="visually-hidden checkbox" name="hotel" id="hotel" aria-label="Гостинница" checked  tabindex="-1">
                   <span class="checkbox-pool"></span>
                   Гостиница
               </label>
-              <label for="motel">
-                <input type="checkbox" class="visually-hidden checkbox" name="motel" id="motel" aria-label="Мотель" checked>
+              <label for="motel" tabindex="0">
+                <input type="checkbox" class="visually-hidden checkbox" name="motel" id="motel" aria-label="Мотель" checked  tabindex="-1">
                   <span class="checkbox-pool"></span>
                 Мотель
               </label>
-              <label for="apartments">
-                <input type="checkbox" class="visually-hidden checkbox" name="apartments" id="apartments" aria-label="Апартаменты" checked>
+              <label for="apartments" tabindex="0">
+                <input type="checkbox" class="visually-hidden checkbox" name="apartments" id="apartments" aria-label="Апартаменты" checked  tabindex="-1">
                   <span class="checkbox-pool"></span>
                 Апартаменты
               </label>
@@ -66,13 +66,13 @@
               <h3>Стоимость в сутки (Р):</h3>
               <ul>
                 <li>от
-                  <input type="number" name="price" value="0">
+                  <input type="number" name="price" value="0" >
                 </li>
                 <li>до
                   <input type="number" name="price" value="3000">
                 </li>
               </ul>
-              <input class="visually-hidden" type="range" name="outs" min="0" max="4000" step="100" value="3000">
+              <input class="visually-hidden" type="range" name="outs" min="0" max="4000" step="100" value="3000" tabindex="-1">
                 <div class="scale">
                   <div class="bar">
                     <span class="visually-hidden">Скролл</span>
